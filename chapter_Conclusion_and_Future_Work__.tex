@@ -1,0 +1,36 @@
+\chapter{Conclusion and Future Work}
+\label{chap:conclusion}
+
+This thesis presented a novel approach for fast and accurate indoor
+localization of MAVs. We pursued an onboard design without the need of
+an additional ground station to foster flexibility and autonomy. The
+conducted on-ground and in-flight experiments underline the real-world
+applicability of the system. Promising results were obtained for
+waypoint navigation, accurate landing, and stable hovering in the
+indoor environment. The
+used approach is based on three pillars.\\
+The first pillar shifts computational effort from the flight phase to
+an offline preprocessing step. This allows for using sophisticated
+algorithms, without affecting performance during flight.\\
+The second pillar states that during flight the MAV lightweight
+algorithms should run with low-performing processors. These algorithms
+should be able to trade off speed with accuracy. This allows to use
+them on a wide range of models, from pico-drones to MAVs with a
+wing-span of over one meter. Examples of these adaptable algorithms
+are the particle filter
+and the texton-based approach. \\
+The third pillar is the known---and possibly---modifiable
+environment. This knowledge and flexibilty allows to predict the
+quality of the used approach. In contrast to SLAM frameworks, in which
+the task is to simultaneous mapping and localization, the proposed
+approach is intended for various repetitive indoor activities.
+
+The developed algorithms set the stage for localization in various
+GPS-denied environments, such as homes, offices, or factory buildings. While the used platform for this project was the Parrot Bebop Drone,
+it is a stepping stone for developing fly-sized aerial vehicles.
+We hope that our indoor localization approach will contribute to
+bridging the gap between engineering and artificial intelligence, and
+pave the way for various directions, such as delivery, search and
+rescue, or surveillance to support human operators in everyday
+life. It addresses the theme of miniaturization and allows to use
+smaller MAVs in a flexible and innovative way.
