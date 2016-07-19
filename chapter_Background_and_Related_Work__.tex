@@ -1,0 +1,102 @@
+\chapter{Background and Related Work}
+\label{chap:relatedwork}
+
+This chapter will discuss advantages and disadvantages of different approaches for indoor localization and
+contrast them to the proposed method. Important
+background knowledge for later chapters, concerning feature detection,
+image matching, and textons will be introduced.
+
+\section{Indoor Localization Methods}
+
+\subsection{Fiducial Markers}
+\label{sec:fiducialmarkers}
+
+Fiducial markers, which are often used in augmented reality
+applications~\cite{kato1999marker,garrido2014automatic}, have been
+used for UAV localization and
+landing~\cite{eberli2011vision,bebop2015}.
+
+The markers encode information by the spatial arrangement of
+black and white or colored image patches, and their corners can be
+used for estimating the camera pose at a high frequency, using
+triangulation methods.
+
+Existing approaches usually identify markers in
+an image using local thresholding, which identifies salient image
+regions. These are further refined by removing improbable shapes,
+yielding an adjusted version of possible marker positions.
+
+During flight, motion blur and varying distances can hinder the
+detection of markers. Moreover, these markers might be considered as
+visually unpleasant and might not fit into a product or environmental
+design~\cite{chu2013halftone}. Additionally, they offer little
+flexibility, since one has to rely on predefined marker dictionaries.
+Their is no direct way to modify the time complexity of the algorithm:
+Reducing the resolution of the images is a time-intense method.
+
+\subsection{Homography Determination \& Keypoint Matching}
+\label{sec:keypointmatching}
+
+A standard approach for estimating camera pose is detecting and
+describing keypoints of the current view and a reference image, using
+algorithms such as \textsc{Sift}~\cite{lowe1999object}. A
+keypoint is a salient image location that is invariant to different
+viewing angles and scaling. By finding a homography, that is a perspective transformation between the image keypoints, it can be determined where
+the current view is located in the reference image. The $3 \times 3$
+homography matrix ($H$) is based on at least four keypoint matches
+between both images. However, usually more points are available,
+leading to an overdetermined equation. An initial homography matrix is
+then created using a least-squares approach and further refined by
+various algorithms.
+
+% TODO:
+% Where has the approach been used and is suitable for the proposed algorithm. 
+
+
+\subsection{Optical Flow}
+\label{sec:opticalflow}
+
+Optical flow estimates the ‘flow’ between successive images: the shift of corresponding image keypoints in $x,y$-direction.
+The approach is computationally rather complex. It is a relative localization method: without an initial reference point, it can only estimate the distance to an initial reference point but not its absolute position in space. The approach suffers from drift: since the distance travelled is based on comparing successive images, errors are accumulating over time. The approach alone does not have the  the possibility to correct these errors.
+
+
+\section{Texton-based Approaches}
+\label{sec:textonbasedapproaches}
+
+Textons are small characteristic image patches that can be used as image features.
+\citeauthor{varma2005statistical} originally introduced textons for
+classifying different textures, showing that they outperform
+computationally more complex algorithms, like Gabor
+filters~\cite{varma2005statistical}.
+
+Instead of convolving a window over the entire image, the filters can be applied at randomly sampled image positions, leading to similar texton histograms compared to the histograms when full sampling is used. The choice of the number of samples allows for modifying the computational effort, resulting in a
+trade-off between accuracy and execution frequency. A disadvantage is
+that it discards all information about the spatial arrangement of
+textons---it does not make use of the \emph{Where} of the information,
+just of the \emph{What}, which might result in different areas with
+similar histograms.
+
+\citeauthor{de2009design} use the texton approach for distinguishing
+between three height classes during flight~\cite{de2009design}. Using
+a nearest neighbor classifier, their approach achieves a height
+classification error of approximately 22\,\% on a hold-out test set.
+This enables a flapping-wing MAV during an experiment to roughly hold
+its height. In another work, \citeauthor{de2012appearance} introduce
+the \emph{appearance variation cue} for estimating the proximity to
+objects~\cite{de2012appearance}. Since closer objects should have less
+variation, these objects should appear less varied. Using this method,
+their MAV is successfully able to avoid obstacles in a $5m \times 5m$
+office space and achieves an AUC of up to .97 on rather distorted
+images. Additionally, it performs better than or, at least, equal to
+optical flow estimations.
+ 
+
+\section{Synthetic Data Generation}
+\label{sec:syntheticdatageneration}
+
+Acquiring data for machine learning methods is usually time-consuming. A viable alternative seems to be the 
+use of synthetic data. However, their applicability in real-world situations is still hindered by
+the reality gap---the difference between simulations and
+real-world situations. The gap can manifest itself in different
+lighting conditions, resolutions, or blur or process noise, like wind,
+or air resistance.
