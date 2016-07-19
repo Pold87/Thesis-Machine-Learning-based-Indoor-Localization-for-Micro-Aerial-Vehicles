@@ -1,0 +1,154 @@
+\chapter{Introduction}
+\label{chap:introduction}
+
+Many crimes over the last decades have been solved thanks to footage
+captured by surveillance cameras. However, stationary cameras can be
+easily manipulated or avoided once it is known where they are
+located. One possible solution may be the use of micro aerial vehicles
+(MAVs) for surveillance. To date, indoor employment of these vehciles
+is still hindered by several limitations. The focus of this thesis is,
+thus, the development of accurate and fast indoor localization for
+MAVs combining computer vision and machine learning techniques.
+
+Since precision, reliability, and rigorous error avoidance are crucial
+for safe flight, autonomous indoor navigation of an MAV is a
+challenging task. While unmanned aerial vehicles (UAVs) for
+outdoor usage can rely on the global positioning system (GPS), this system is
+usually not available in confined spaces and would not provide
+sufficiently accurate estimates in cluttered environments.
+
+
+Processors of MAVs have only limited processing power. Moreover,
+it is intended to further reduce the size of MAVs to that of an
+insect, hence necessitating lightweight and scalable position
+estimation algorithms.
+
+If sufficient computational and physical power is available, a typical
+approach to estimate a UAV's position is by using active laser
+rangefinders~\cite{grzonka2009towards,bachrach2009autonomous}.
+Although this approach is used in some simultaneous localization and
+mapping (SLAM) frameworks, it is usually not feasible for MAVs because
+they can carry only small payloads. A viable alternative are passive
+computer vision techniques. Relying on visual information scales down
+the physical payload since cameras are often significantly lighter
+than laser
+rangefinders~\cite{blosch2010vision,angeli20062d,ahrens2009vision}.
+Additionally, many commercially available drones are already equipped
+with cameras. In contrast to other existing approaches, it does not rely on data from the inertial measurement unit (IMU). The only required tool is a camera, which makes the proposed algorithm rather safe to failure. Cameras are lightweight and not affected by external, such as magnetic fields. Additionally, relying on reduces the number of possible points of failure.  
+
+However, this reduced physical payload is not without cost: it must be
+traded off against the higher computational payload for the onboard
+CPU. For example, a standard technique for 3D pose estimation extracts
+keypoints of the current camera image and a map image and then
+determines a homography between both keypoint sets. While this
+approach has been used for visual SLAM for
+MAVs~\cite{blosch2010vision}, the pipeline for accurate feature
+detection, description, matching, and pose estimation is
+CPU-intensive~\cite{kendall2015convolutional}.
+One way to overcome this problem is to process the data on a powerful
+external processor by establishing a wireless connection between the
+MAV and a ground station. Such off-board localization techniques often
+lack the versatility to function in changing environments, though, due
+to factors---such as the bandwidth, delay, or noise of the wireless
+connection---interfering with the system's reliability.
+
+In the approach proposed in this thesis, computational power will be
+shifted to an offline training phase to achieve high-speed during live
+operation. In contrast to visual SLAM frameworks, this project considers
+scenarios in which the environment is known beforehand or can be even
+actively modified. The environment is non-dynamic and planar, therefore, the UAV will make use of texture on the bottom or ceiling of the environment.
+ It uses a rather simple stimulus-response behavior to
+estimate the position, which circumvents the requirement to store a
+map in the UAV's `mind'. To assign $x,y$-coordinates to images in a
+training set, keypoints in the current image and a map image are
+detected. This is then followed by finding a homography between
+them. In the next step, the complexity of these images is reduced by
+\emph{sparse encoding} : images are represented by determining their
+histogram of textons---small characteristic image
+patches~\cite{varma2005statistical}.
+New images can then also be encoded by texton histograms and matched
+to images with known $x,y$-positions using the $k$-Nearest Neighbors
+($k$NN) algorithm. The computational effort of the approach can be
+adjusted by modifying the amount of extracted patches, resulting in a
+trade-off between accuracy and execution frequency. While the $k$NN
+algorithm is one of the simplest machine learning algorithms, it
+offers several advantages: it is non-parametric, allowing for the
+modeling of arbitrary distributions. Its capability to output multiple
+predictions with an associated confidence allows for neat integration
+with the proposed particle filter. Finally, computational complexity
+can be modified by changing the size of the datasets.
+
+
+This opens the door for improving the proposed
+algorithm by changing the map. On the basis of desired characteristics
+of a given map, an evaluation technique was developed that determines
+the suitability of an environment for the proposed approach. This
+technique allows for spotting distant regions with similar image
+features, which could lead to deteriorated performance. The evaluation
+can be performed using a given map image or recorded images during
+flight. In the former case, synthetic images will be generated from
+the map image that simulate images taken during flight.
+
+The goal is to estimate $x,y$-coordinates in real-time and on-board of the UAV. It is assumed that the UAV flies at a approximately constant height, such that the estimation of height is not necessary.
+
+
+\section{Contributions}
+\label{sec:contributions}
+
+The first contribution of this thesis is a machine learning-based
+indoor localization system that is able to run in real-time on board
+of an MAV, paving the way to a fully autonomous system. In contrast to
+existing \emph{active} approaches, the proposed \emph{passive}
+approach only uses a single, monocular, downward-looking camera. Since
+computer vision-based localization approaches yield noisy estimates, a
+variant of a particle filter was developed that aggregates estimations
+over time to produce more accurate predictions. It handles the
+estimates of the $k$NN algorithm in an integrative way and resolves
+position ambiguities. The method operates on single images and, in
+contrast to, for example visual odometry, does not suffer from error
+accumulation over time.
+
+The second contribution is a map evaluation technique that predicts
+the suitability of a given environment for the proposed algorithm. To
+this end, a synthetic data generation tool was developed that creates
+random variations of an image. The tool simulates different viewing
+angles, motion blur, and lighting settings; the generated synthetic
+images are labeled with $x,y$-coordinates based on the 3D position of
+the simulated camera model.
+
+The developed software is made publicly available. It encompasses (i)
+the localization algorithm as part of the Paparazzi project, which
+consists of the texton-based approach in combination with a particle
+filter (ii) software for augmenting an image with synthetic views,
+(iii) a script for evaluating a map based on histograms and
+corresponding $x,y$-positions.
+
+\section{Research Questions}
+\label{sec:researchquestions}
+
+The research questions addressed in this thesis are:
+
+\begin{itemize}
+\item Can 2D positions be estimated in real-time using a machine
+  learning approach on a limited processor in a modifiable indoor
+  environment?
+%\item Is accurate real-world localization regression possible when the
+%  training data comprises synthetic data only?
+\item Can we predict the suitability of a given map for the proposed
+  localization approach?
+\end{itemize}
+
+\section{Outline}
+\label{sec:outline}
+
+The remainder of this thesis is structured as follows.
+Chapter~\ref{chap:relatedwork} surveys existing indoor localization
+approaches related to this thesis. In Chapter~\ref{chap:methods}, the
+developed texton-based approach is presented and its components, the
+$k$NN algorithm and the particle filter, are introduced. Details about
+the synthetic data generation tool and map evaluation technique are
+also given. Chapter~\ref{chap:analysis} describes the setup of the
+on-ground and in-flight experiments. The results of the experiments
+are presented in Chapter~\ref{chap:results} and discussed in
+Chapter~\ref{chap:discussion}. Finally, we draw our conclusions and
+indicate future research directions in Chapter~\ref{chap:conclusion}.
