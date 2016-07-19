@@ -1,0 +1,127 @@
+\chapter{Analysis}
+\label{chap:analysis}
+
+In this chapter, the setup of the conducted experiments is
+presented. We examine different parameter choices in Experiment~1 to 6
+in on-ground experiments using recorded data. Afterward, the found
+parameters are used to show the validity during flight in
+Experiments~7 and 8. The experiments were conducted in TU Delft's
+CyberZoo---an indoor flight arena of size $w \times l \times h = 10\,m
+\times10\,m \times 7\,m$, with relatively constant lighting settings
+due to artificial lighting.
+
+The developed script runs on board of the MAV with a
+frequency of 13\,Hz.
+
+\section{Analysis -- Determining the Number of Textons}
+\label{sec:numtextons}
+
+The developed framework allows to tune the computational complexity by
+modifying the number of extracted image patches (samples). To increase
+the speed of the algorithm, the goal is to use as few samples as
+possible. To determine a suitable number of extracted samples, in this
+experiment, the average cosine similarity between $D = 20$ datasets of
+histograms is compared. Each dataset consists of $N = 10300$
+histograms. The independent variable is the number of extracted image
+patches $M$. The histograms were generated using the same images. Due
+to the random sampling of the extracted image patches, the histograms
+of each datasets will differ. This deviation will be measured using
+the cosine similarity. Therefore, each of the $D$ datasets was
+compared to all the other $D - 10$ datasets and the average cosine
+similarity was determined as well as the standard deviation of the
+cosine similarity was measured. Comparing the cosine similarity
+between the histograms has the advantage that the number of samples
+can be determined independent of a specific task.
+
+\section{Analysis -- Setting the Baseline for kNN and determining k}
+\label{sec:numtextons}
+
+In a standard setting, the training error $\epsilon_t$ of a
+$k$=1-nearest neighbor algorithm is $\epsilon_t = 0$ because the
+nearest neighbor of the sample will be the sample itself. However, in
+this scenario, we deal with random sampling such that each image will
+be represented by a slightly different histogram each time the
+histogram is extracted.
+
+\section{Experiment -- Texture recognition task} 
+\label{sec:experiment1}
+
+The classification algorithm was validated on a recorded in-flight
+video. For creating the data set, 500 images were recorded for each of
+32 logos, placed in different environments, as shown in
+Figure~\ref{exp1setup}. The images did not contain motion blur and
+were recorded in different heights ranging from 20\,cm to 150\,cm.
+
+For the training, three different approaches were compared: (i)
+training on recorded images, (ii) training on synthetic data and (iii)
+training on a combination of real-world data and synthetic data.  The
+combination (iii) should give an accuracy increase due to the larger
+training dataset. For generating synthetic data, each marker was
+randomly rotated and put into different environments using the data
+augmentation tool presented in
+Section~\ref{sec:syntheticdatageneration}. For both training and
+testing, the same camera model was used.
+
+Additionally, 1000 images of random scenes without markers were added
+to the training set, to ensure that the classifier exhibits a high
+true negative accuracy.
+
+\section{Experiment -- Dense map}
+\label{sec:experiment4}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{lr}
+    \toprule
+    Step & Time in $ms$\\
+    \midrule
+    Read image & $6$\\
+    Local standardization & $27$\\
+    Histogram extraction & $14$\\
+    Prediction (XGB) & $1$\\    
+    \bottomrule
+  \end{tabular}
+  \caption{{Time requirements for the steps of the algorithm.}}
+  \label{tab:timerequirementsdense}
+
+\end{table}
+
+\section{Experiment -- Motion tracking system for Stabilization, Texton-based Approach for estimation}
+\label{sec:experiment4}
+
+In this experiment, a fixed route was set using the ground control
+station. While the stabilization and guidance were performed using
+the motion tracking system, the position estimates were performed onboard
+of the MAV using the texton-based approach. The Euclidean distances between the estimates of the motion tracking system and the texton-based approach
+were measured separately for the $x$- and $y$-direction. The experiment uses the
+particle filter and the textons only.
+
+\section{Experiment -- Texton-based Approach for Guidance, Motion tracking system for Validation}
+\label{sec:experiment-6}
+
+In this experiment, the navigation was entirely performed by
+the presented algorithm, except for height control, which was based on
+the sonar measurements. A predefined route was created beforehand and
+the difference between the desired path and actual path was
+determined, using the motion tracking system for recording the data.
+
+\section{Experiment -- Comparing different possible maps}
+
+For the map comparison, 50 possible maps have been collected using the
+search term `wallpaper' in Google's image search. This search term was
+used, since it is (i) a general term, without any specific image
+categories, (ii) wallpapers are likely to have a high resolution, and
+(iii) wallpapers are likely to be that visually pleasant since they
+are used as desktop backgrounds. The criteria for the images were that
+their minimum resolution was $1920 \times 1080$. Images with a higher
+resolution were converted to $1920 \times 1080$.  For each image, we
+generated 1000 random image patches using the simulation method
+described in Section~\ref{sec:draug}, followed by the histogram
+extraction method. This yielded a labeled dataset of histograms and
+corresponding positions. For each map, we determined the expected
+overall loss based on the method described in
+Section~\label{sec:mapeval}. The compared maps were then sorted
+according to their estimated loss. Three of the compared maps---the
+best performing, the one with median performance, and the worst
+performing---were printed on A0 paper to test the performance in the
+real world.
