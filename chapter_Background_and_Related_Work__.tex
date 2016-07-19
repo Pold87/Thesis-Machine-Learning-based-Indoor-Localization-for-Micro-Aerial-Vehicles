@@ -39,7 +39,7 @@ A standard approach for estimating camera pose is detecting and
 describing keypoints of the current view and a reference image, using
 algorithms such as \textsc{Sift}~\cite{lowe1999object}. A
 keypoint is a salient image location that is invariant to different
-viewing angles and scaling. By finding a homography, that is a perspective transformation between the keypoints of the current view and a reference image, the current view can be located in the reference image. The $3 \times 3$
+viewing angles and scaling. Keypoints are described by a feature vector. By finding a homography, that is a perspective transformation between the keypoints of the current view and a reference image, the current view can be located in the reference image. The $3 \times 3$
 homography matrix ($H$) is based on at least four keypoint matches
 between both images. However, usually more points are available,
 leading to an overdetermined equation. An initial homography matrix is
@@ -52,5 +52,5 @@ various algorithms.
 \subsection{Optical Flow}
 \label{sec:opticalflow}
 
-Optical flow estimates the ‘flow’ between successive images: the shift of corresponding image keypoints in $x,y$-direction.
+Optical flow estimates the motion based on successive images: the shift of corresponding image keypoints in $x,y$-direction.
 The approach is computationally rather complex. It is a relative localization method: without an initial reference point, it can only estimate the distance to an initial reference point but not its absolute position in space. The approach suffers from drift: since the distance travelled is based on comparing successive images, errors are accumulating over time. The approach alone does not have the  the possibility to correct these errors.
