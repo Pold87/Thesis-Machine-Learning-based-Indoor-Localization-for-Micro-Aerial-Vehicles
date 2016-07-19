@@ -1,0 +1,29 @@
+\section{Texton-based Approaches}
+\label{sec:textonbasedapproaches}
+
+Textons are small characteristic image patches that can be used as image features.
+\citeauthor{varma2005statistical} originally introduced textons for
+classifying different textures, showing that they outperform
+computationally more complex algorithms, like Gabor
+filters~\cite{varma2005statistical}.
+
+Instead of convolving a window over the entire image, the filters can be applied at randomly sampled image positions, leading to similar texton histograms compared to the histograms when full sampling is used. The choice of the number of samples allows for modifying the computational effort, resulting in a
+trade-off between accuracy and execution frequency. A disadvantage is
+that it discards all information about the spatial arrangement of
+textons---it does not make use of the \emph{Where} of the information,
+just of the \emph{What}, which might result in different areas with
+similar histograms.
+
+\citeauthor{de2009design} use the texton approach for distinguishing
+between three height classes during flight~\cite{de2009design}. Using
+a nearest neighbor classifier, their approach achieves a height
+classification error of approximately 22\,\% on a hold-out test set.
+This enables a flapping-wing MAV during an experiment to roughly hold
+its height. In another work, \citeauthor{de2012appearance} introduce
+the \emph{appearance variation cue} for estimating the proximity to
+objects~\cite{de2012appearance}. Since closer objects should have less
+variation, these objects should appear less varied. Using this method,
+their MAV is successfully able to avoid obstacles in a $5m \times 5m$
+office space and achieves an AUC of up to .97 on rather distorted
+images. Additionally, it performs better than or, at least, equal to
+optical flow estimations.
