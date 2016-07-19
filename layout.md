@@ -3,3 +3,4 @@ begin_abstract_Widespread_possibilities_make__.tex
 chapter_Introduction_label_chap_introduction__.tex
 chapter_Background_and_Related_Work__.tex
 chapter_Methods_label_chap_methods__.tex
+chapter_Analysis_label_chap_analysis__.tex
