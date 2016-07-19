@@ -1,0 +1,88 @@
+\chapter{Results}
+\label{chap:results}
+
+\section{Experiment -- Determining the Number of Textons}
+
+Figure~\ref{fig:cosine} displays the cosine similarity of histograms
+in relation to the number of samples and the corresponding standard
+deviations.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{figures/samples_vs_similarity/default_figure}
+\caption{{\label{fig:cosine} \emph{Left}:
+    Cosine similarity of histograms in relation to the number of
+    samples \emph{Right}: Standard deviation of cosine similarity in
+    relation to the number of samples. The squares indicate the
+    positions at which the dependency was evaluated.%
+}}
+\end{center}
+\end{figure}
+
+\section{Goodness of Fit}
+
+\section{Experiment -- OptiTrack vs TreXton}
+\label{sec:experiment-2}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lrrr}
+    \toprule
+    & x-position & y-position & combined\\
+    \midrule
+    Error in $cm$ & 46 & 54 & ...\\
+    STD in $cm$ & 56 & 71  & ...\\
+    \bottomrule
+  \end{tabular}
+  \caption[Triggered landings]{Results of the triggered landings}
+  \label{tab:targetlanding}
+
+\end{table}
+
+\section{Experiment -- Evaluation of Maps}
+\label{sec:experiment-3}
+
+In Table~\ref{tab:mapeval}, the results of the map evaluation
+procedure for the $N = 46$ maps are shown.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lr}
+    \toprule
+    Statistic & Value\\
+    \midrule
+    mean & 0.57\\
+    median & 0.55\\
+    standard deviation & 0.14\\
+    max & 0.99\\
+    min & 0.24\\    
+    \bottomrule
+  \end{tabular}
+  \caption[Map evaluation procedure on synthetic data]{Results of the map evaluation procedure on synthetic data}
+  \label{tab:mapeval}
+
+\end{table}
+
+\section{Experiment -- Triggered Landing}
+\label{sec:experiment-4}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lrrr}
+    \toprule
+    & x-position & y-position & combined\\
+    \midrule
+    Error in $cm$ & 46 & 54 & 71\\
+    STD in $cm$ & 56 & 71  & ...\\
+    \bottomrule
+  \end{tabular}
+  \caption[Triggered landings]{Results of the triggered landings}
+  \label{tab:targetlanding}
+
+\end{table}
+
+\section{Experiment -- Comparing different possible maps}
+\label{sec:experiment-6}
+
+Figure~\ref{fig:maplosses} shows the compared maps and the
+corresponding loss values in ascending order of loss value.
