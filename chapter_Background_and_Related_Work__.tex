@@ -15,15 +15,14 @@ Fiducial markers, which are often used in augmented reality
 applications~\cite{kato1999marker,garrido2014automatic}, have been
 used for UAV localization and
 landing~\cite{eberli2011vision,bebop2015}.
-
 The markers encode information by the spatial arrangement of
 black and white or colored image patches, and their corners can be
 used for estimating the camera pose at a high frequency, using
 triangulation methods.
 
-Existing approaches usually identify markers in
-an image using local thresholding, which identifies salient image
-regions. These are further refined by removing improbable shapes,
+The positions of the markers in
+an image are usually determined using local thresholding, which identifies salient image
+regions. The positions are further refined by removing improbable shapes,
 yielding an adjusted version of possible marker positions.
 
 During flight, motion blur and varying distances can hinder the
@@ -31,8 +30,7 @@ detection of markers. Moreover, these markers might be considered as
 visually unpleasant and might not fit into a product or environmental
 design~\cite{chu2013halftone}. Additionally, they offer little
 flexibility, since one has to rely on predefined marker dictionaries.
-Their is no direct way to modify the time complexity of the algorithm:
-Reducing the resolution of the images is a time-intense method.
+There is no direct way to modify the time complexity of the algorithm.
 
 \subsection{Homography Determination \& Keypoint Matching}
 \label{sec:keypointmatching}
@@ -41,8 +39,7 @@ A standard approach for estimating camera pose is detecting and
 describing keypoints of the current view and a reference image, using
 algorithms such as \textsc{Sift}~\cite{lowe1999object}. A
 keypoint is a salient image location that is invariant to different
-viewing angles and scaling. By finding a homography, that is a perspective transformation between the image keypoints, it can be determined where
-the current view is located in the reference image. The $3 \times 3$
+viewing angles and scaling. By finding a homography, that is a perspective transformation between the keypoints of the current view and a reference image, the current view can be located in the reference image. The $3 \times 3$
 homography matrix ($H$) is based on at least four keypoint matches
 between both images. However, usually more points are available,
 leading to an overdetermined equation. An initial homography matrix is
@@ -51,7 +48,6 @@ various algorithms.
 
 % TODO:
 % Where has the approach been used and is suitable for the proposed algorithm. 
-
 
 \subsection{Optical Flow}
 \label{sec:opticalflow}
