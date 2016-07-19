@@ -90,35 +90,3 @@ flight. In the former case, synthetic images will be generated from
 the map image that simulate images taken during flight.
 
 The goal is to estimate $x,y$-coordinates in real-time and on-board of the UAV. It is assumed that the UAV flies at a approximately constant height, such that the estimation of height is not necessary.
-
-
-\section{Contributions}
-\label{sec:contributions}
-
-The first contribution of this thesis is a machine learning-based
-indoor localization system that is able to run in real-time on board
-of an MAV, paving the way to a fully autonomous system. In contrast to
-existing \emph{active} approaches, the proposed \emph{passive}
-approach only uses a single, monocular, downward-looking camera. Since
-computer vision-based localization approaches yield noisy estimates, a
-variant of a particle filter was developed that aggregates estimations
-over time to produce more accurate predictions. It handles the
-estimates of the $k$NN algorithm in an integrative way and resolves
-position ambiguities. The method operates on single images and, in
-contrast to, for example visual odometry, does not suffer from error
-accumulation over time.
-
-The second contribution is a map evaluation technique that predicts
-the suitability of a given environment for the proposed algorithm. To
-this end, a synthetic data generation tool was developed that creates
-random variations of an image. The tool simulates different viewing
-angles, motion blur, and lighting settings; the generated synthetic
-images are labeled with $x,y$-coordinates based on the 3D position of
-the simulated camera model.
-
-The developed software is made publicly available. It encompasses (i)
-the localization algorithm as part of the Paparazzi project, which
-consists of the texton-based approach in combination with a particle
-filter (ii) software for augmenting an image with synthetic views,
-(iii) a script for evaluating a map based on histograms and
-corresponding $x,y$-positions.
