@@ -198,22 +198,3 @@ SIFT can have wrong and inaccurate matches.
 
 In all cases, the result will be a labeled dataset of images and corresponding $x,y$-positions. The $x,y$-positions are of different quality depending on the used technique: orthomap-based, poster-based, or motion tracking-based. 
 
-
-\section{Pillar II: Texton-based Approach}
-\label{sec:textons}
-
-In this section, the core of the proposed algorithm, the
-implementation of the proposed texton framework is described.  The
-histograms of textons are used as features for the $k$-Nearest
-Neighbors ($k$NN) algorithm. The outputs of this regression technique
-are possible $x,y$-coordinates for a given image.
-
-In the following pseudo code, $M$ represents the number of particles,
-$z_t^x$ the output of the texton framework at time $t$, and $f_t^x$
-the estimated flow at time $t$.
-
-
-Importantly, for generating the training dataset, no subsampling was
-used. Therefore, the training dataset will not show any variance, if
-the same images were used.
-
