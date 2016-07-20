@@ -1,0 +1,72 @@
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{figures/measurement_model/default_figure}
+\caption{{\label{fig:measurementmodel} Measurement model showing the delta x and delta y
+    positions%
+}}
+\end{center}
+\end{figure}
+
+This allows to make use of the information in all $k$ neighbors and
+keep track of a multimodal distribution. While keeping track of a
+multimodal distribution allows for incorporating several possible
+states of the system, the problem arises of which mode is the best
+one. Using a weighted average of the modes would again introduce the
+problem, that the weighted average falls into a low density
+region. Therefore, the maximum a posteriori estimate, as described in
+\cite{driessen2008map} is used. This approach uses the following
+formula to obtain the MAP estimate:
+
+Therefore, the final position estimate is equal to the position of one
+of the particles.
+
+\begin{align}
+  s_k^{MAP}  &= \argmax_{s_k}{p(s_k \mid Z_k)}\\
+             &= \argmax_{s_k}{p(z_k \mid s_k) p(s_k \mid Z_{k-1})} 
+\end{align}
+
+Therefore, the MAP estimator in our case is
+
+\begin{align}
+s_k^{MAP} = \argmax_{s_k} \lambda^M(s_k)
+\end{align}
+with
+
+\begin{align}
+\lambda^M(s_k) = p(z_k \mid s_k) \sum_{j=1}^Mp(s_k \mid s_{k-1}^j)w^j_{k-1}
+\end{align}
+
+This function is now only evaluated at a finite, chosen number of
+states, the particles, using
+
+\begin{align}
+\hat{s}_k^{MAP} = \argmax_{s_k \in \{s_k^i \mid i=1,\ldots,N\}} \lambda^M(s_k)
+\end{align}
+
+In this formula, $p(z_k \mid s_k)$ is the likelihood of the particle
+$s_k$ given the current measurement $z_k$. In our setting, this
+probability is equal to the weight of the particle $z_k$, therefore
+$p(z_k \mid s_k) = w^i_k$.
+
+The estimation of \emph{uncertainty} is a core part of the proposed
+approach, being important for safety and accuracy. Therefore,
+uncertainty was modeled using the spread of the particles.
+
+In every time step, the particles of the filter get updated based on
+the optical flow estimates. These estimates are noisy, as illustrated
+in Figure~\ref{fig:edgeflow}. Additionally, optical flow estimates
+aggregate noise over time, since each estimate is dependent on the
+previous one, leading to drift (\emph{relative position
+  estimates}). In contrast, the machine learning-based method makes
+independent predictions. While this allow for avoiding accumulating
+errors, the predictions do not dependent on each other, and might be
+`jumping' between two points. To combine the advantages of both
+methods, and leverage out the disadvantages, the particle filter is
+used.
+
+An idea was to include the similarity to the neighbors as confidence
+value, thus reducing the measurement noise, if a high similarity
+between current histogram and a training histogram is
+achieved. However, we found no correlation between these
+variables. Figure~\ref{fig:cor_sim_measurement} displays the
+dependence structure.
