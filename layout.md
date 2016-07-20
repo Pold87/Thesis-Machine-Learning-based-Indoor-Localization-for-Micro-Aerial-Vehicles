@@ -14,6 +14,7 @@ chapter_Background_and_Related_Work__.tex
 section_Vision_based_Localization_Methods__.tex
 figures/markers/markers.png
 subsection_Homography_Determination_Keypoint_Matching__.tex
+figures/sift/sift.png
 subsection_Optical_Flow_label_sec__.tex
 section_Synthetic_Data_Generation_label__1.tex
 section_Texton_based_Approaches_label__.tex
