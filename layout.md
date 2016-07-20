@@ -10,6 +10,7 @@ section_Texton_based_Approaches_label__.tex
 section_Synthetic_Data_Generation_label__.tex
 chapter_Methods_label_chap_methods__.tex
 section_Map_evaluation_label_sec__.tex
+figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
 chapter_Results_label_chap_results__.tex
 chapter_Discussion_label_chap_discussion__.tex
