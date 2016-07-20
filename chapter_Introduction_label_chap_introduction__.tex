@@ -17,11 +17,6 @@ outdoor usage can rely on the global positioning system (GPS), this system is
 usually not available in confined spaces and would not provide
 sufficiently accurate estimates in cluttered environments.
 
-
-Processors of MAVs have only limited processing power. It is intended to further reduce the size of MAVs to that of an
-insect, hence necessitating lightweight and scalable position
-estimation algorithms.
-
 If sufficient computational and physical power is available, a typical
 approach to estimate a UAV's position is by using active laser
 rangefinders~\cite{grzonka2009towards,bachrach2009autonomous}.
@@ -37,7 +32,8 @@ with cameras. In contrast to other existing approaches, the proposed algorithm d
 
 However, this reduced physical payload is not without cost: it must be
 traded off against the higher computational payload for the onboard
-CPU. For example, a standard technique for 3D pose estimation extracts
+CPU. Processors of MAVs have only limited processing power.
+For example, a standard technique for 3D pose estimation extracts
 keypoints of the current camera image and a map image and then
 determines a homography between both keypoint sets. While this
 approach has been used for visual SLAM for
