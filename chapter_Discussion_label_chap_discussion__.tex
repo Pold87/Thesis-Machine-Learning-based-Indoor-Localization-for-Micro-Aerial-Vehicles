@@ -7,17 +7,3 @@ samples suffices to achieve similarities larger than $99\,\%$. In
 fact, $\frac{400}{640 \times 480} = 0.13\,\%$. This set the stage for
 large speed-ups during live operation. Additionally, it allow for further speed-ups depending on the processing power of the used
 CPU.
-
-The evaluation of different maps using the synthetic data showed
-considerable differences between the evaluated images. The range of
-losses from 0.24 to 0.99 clearly shows the different suitabilities of different maps for the proposed algorithm. In order to visually evaluate the
-proposed map evaluation technique, a simple map was constructed with
-two repeating tiles. The image with the minimum and the one with the
-maximum loss value based on their color histogram are shown in
-Figure~\ref{fig:minmaximg}. The different patterns of the images are
-clearly visible: while the image with the minimum value fulfills the
-desired properties---closeby areas have similar color values, distant
-areas are dissimilar, the image with the maximum loss is mainly black
-resulting in similar histograms all over the place and leading to
-high loss values. This initial evidence can be taken to test the
-predictive power of the evaluation algorithm for texton histograms.
