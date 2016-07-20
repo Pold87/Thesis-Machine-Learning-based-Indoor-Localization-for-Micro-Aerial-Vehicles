@@ -23,6 +23,7 @@ chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
 figures/gui/gui.png
 section_Pillar_I_Training_Set__.tex
+figures/bestmap/bestmap.png
 section_Pillar_II_Texton_based__.tex
 subsection_Texton_Dictionary_Generation_label__.tex
 subsection_k_Nearest_Neighbors_k__.tex
