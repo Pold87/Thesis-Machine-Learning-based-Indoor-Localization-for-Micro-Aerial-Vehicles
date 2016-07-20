@@ -16,4 +16,5 @@ figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
 chapter_Results_label_chap_results__.tex
 chapter_Discussion_label_chap_discussion__.tex
+The_shift_of_the_processing__.tex
 chapter_Conclusion_and_Future_Work__.tex
