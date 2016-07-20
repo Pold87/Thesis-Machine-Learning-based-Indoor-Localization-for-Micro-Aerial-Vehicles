@@ -25,8 +25,8 @@ section_Filtering_and_Smoothing_label__.tex
 begin_figure_h_begin_center__.tex
 Another_idea_if_the_homography__.tex
 figures/overview/overview.png
-section_Pillar_III_Map_evaluation__.tex
 figures/comparison/comparison.png
+section_Pillar_III_Map_evaluation__.tex
 figures/draug/draug.png
 subsection_Evaluation_Scheme_label_sec__.tex
 begin_figure_h_begin_center__3.tex
