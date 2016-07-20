@@ -16,16 +16,3 @@ challenging task. While unmanned aerial vehicles (UAVs) for
 outdoor usage can rely on the global positioning system (GPS), this system is
 usually not available in confined spaces and would not provide
 sufficiently accurate estimates in cluttered environments.
-
-If sufficient computational and physical power is available, a typical
-approach to estimate a UAV's position is by using active laser
-rangefinders~\cite{grzonka2009towards,bachrach2009autonomous}.
-Although this approach is used in some simultaneous localization and
-mapping (SLAM) frameworks, it is usually not feasible for MAVs because
-they can carry only small payloads. A viable alternative are passive
-computer vision techniques. Relying on visual information scales down
-the physical payload since cameras are often significantly lighter
-than laser
-rangefinders~\cite{blosch2010vision,angeli20062d,ahrens2009vision}.
-Additionally, many commercially available drones are already equipped
-with cameras. In contrast to other existing approaches, the proposed algorithm does not rely on data from the inertial measurement unit (IMU). The only required tool is a camera, which makes the proposed algorithm rather safe to failure. Cameras are lightweight and not affected by external, such as magnetic fields. Additionally, relying on reduces the number of possible points of failure.  
