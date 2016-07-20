@@ -76,16 +76,3 @@ modeling of arbitrary distributions. Its capability to output multiple
 predictions with an associated confidence allows for neat integration
 with the proposed particle filter. Finally, computational complexity
 can be modified by changing the size of the datasets.
-
-
-This opens the door for improving the proposed
-algorithm by changing the map. On the basis of desired characteristics
-of a given map, an evaluation technique was developed that determines
-the suitability of an environment for the proposed approach. This
-technique allows for spotting distant regions with similar image
-features, which could lead to deteriorated performance. The evaluation
-can be performed using a given map image or recorded images during
-flight. In the former case, synthetic images will be generated from
-the map image that simulate images taken during flight.
-
-The goal is to estimate $x,y$-coordinates in real-time and on-board of the UAV. It is assumed that the UAV flies at a approximately constant height, such that the estimation of height is not necessary.
