@@ -1,0 +1,20 @@
+ It uses a rather simple stimulus-response behavior to
+estimate the position, which circumvents the requirement to store a
+map in the UAV's `mind'. To assign $x,y$-coordinates to images in a
+training set, keypoints in the current image and a map image are
+detected. This is then followed by finding a homography between
+them. In the next step, the complexity of these images is reduced by
+\emph{sparse encoding}: images are represented by determining their
+histogram of textons---small characteristic image
+patches~\cite{varma2005statistical}.
+New images can then also be encoded by texton histograms and matched
+to images with known $x,y$-positions using the $k$-Nearest Neighbors
+($k$NN) algorithm. The computational effort of the approach can be
+adjusted by modifying the amount of extracted patches, resulting in a
+trade-off between accuracy and execution frequency. While the $k$NN
+algorithm is one of the simplest machine learning algorithms, it
+offers several advantages: it is non-parametric, allowing for the
+modeling of arbitrary distributions. Its capability to output multiple
+predictions with an associated confidence allows for neat integration
+with the proposed particle filter. Finally, computational complexity
+can be modified by changing the size of the datasets.
