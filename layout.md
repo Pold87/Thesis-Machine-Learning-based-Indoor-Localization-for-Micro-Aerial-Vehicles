@@ -11,7 +11,7 @@ section_Synthetic_Data_Generation_label__.tex
 chapter_Methods_label_chap_methods__.tex
 begin_figure_h_begin_center__.tex
 figures/overview/overview.png
-section_Map_evaluation_label_sec__.tex
+section_Pillar_III_Map_evaluation__.tex
 figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
 chapter_Results_label_chap_results__.tex
