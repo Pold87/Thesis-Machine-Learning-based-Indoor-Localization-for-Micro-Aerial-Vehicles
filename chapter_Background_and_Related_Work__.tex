@@ -5,29 +5,3 @@ This chapter will discuss advantages and disadvantages of different approaches f
 contrast them to the proposed method. Important
 background knowledge for later chapters, concerning feature detection,
 image matching, and textons will be introduced. While the range of methods for indoor localization is wide-spread---from laser range scanners over depth cameras to RFID tag based localization---only methods that are closely related to the proposed approach are discussed. In detail, this means that the approach should be based on a monocular camera.
-
-\section{Vision-based Localization Methods}
-
-\subsection{Fiducial Markers}
-\label{sec:fiducialmarkers}
-
-Fiducial markers, which are often used in augmented reality
-applications~\cite{kato1999marker,garrido2014automatic}, have been
-used for UAV localization and
-landing~\cite{eberli2011vision,bebop2015}.
-The markers encode information by the spatial arrangement of
-black and white or colored image patches, and their corners can be
-used for estimating the camera pose at a high frequency, using
-triangulation methods. The positions of the markers in
-an image are usually determined using local thresholding, which identifies salient image
-regions. The positions are further refined by removing improbable shapes,
-yielding an adjusted version of possible marker positions.
-
-During flight, motion blur and varying distances can hinder the
-detection of markers. Moreover, these markers might be considered as
-visually unpleasant and might not fit into a product or environmental
-design~\cite{chu2013halftone}. They offer little
-flexibility, since one has to rely on predefined marker dictionaries.
-There is no direct way to modify the time complexity of the algorithm.
-
-% TODO: which errors have been achieved
