@@ -105,29 +105,3 @@ the sonar measurements. A predefined route was created beforehand and
 the difference between the desired path and actual path was
 determined, using the motion tracking system for recording the data.
 
-\section{Experiment -- Comparing different possible maps}
-
-For the map comparison, 50 possible maps have been collected using the
-search term `wallpaper' in Google's image search. This search term was
-used, since it is (i) a general term, without any specific image
-categories, (ii) wallpapers are likely to have a high resolution, and
-(iii) wallpapers are likely to be that visually pleasant since they
-are used as desktop backgrounds. The criteria for the images were that
-their minimum resolution was $1920 \times 1080$. Images with a higher
-resolution were converted to $1920 \times 1080$.  For each image, we
-generated 1000 random image patches using the simulation method
-described in Section~\ref{sec:draug}, followed by the histogram
-extraction method. This yielded a labeled dataset of histograms and
-corresponding positions. For each map, we determined the expected
-overall loss based on the method described in
-Section~\label{sec:mapeval}. The compared maps were then sorted
-according to their estimated loss. Three of the compared maps---the
-best performing, the one with median performance, and the worst
-performing---were printed on A0 paper to test the performance in the
-real world.
-
-\section{Experiment -- Determining the Frequency}
-
-The frequency of the proposed algorithm is determined by varying 
-
-
