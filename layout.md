@@ -21,6 +21,7 @@ figures/overview/overview.png
 section_Pillar_III_Map_evaluation__.tex
 figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
+section_Analysis_Determining_the_Number__.tex
 section_Analysis_Setting_the_Baseline__.tex
 section_Experiment_Texture_recognition_task__.tex
 section_Experiment_Motion_tracking_system__.tex
