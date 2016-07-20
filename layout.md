@@ -13,6 +13,7 @@ section_Texton_based_Approaches_label__.tex
 section_Synthetic_Data_Generation_label__.tex
 chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
+section_Filtering_and_Smoothing_label__.tex
 begin_figure_h_begin_center__.tex
 Another_idea_if_the_homography__.tex
 figures/overview/overview.png
