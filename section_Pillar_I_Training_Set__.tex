@@ -64,19 +64,3 @@ multiple images. Yet another method starts with an existing image and
 modifies the environment accordingly---for example by painting the
 floor or printing posters--to correspond to the image. In all cases,
 we will describe the environment as \emph{map image}. 
-
-Keypoints of the current image and the map image are detected and
-described using the SIFT algorithm. This is followed by a matching
-process, that identifies corresponding keypoints between both
-images. These matches allow for finding a homography between both
-images. For determining the $x, y$-position of the current image, the
-center of it is projected on the reference image using the homography
-matrix. The pixel position of the center in the reference image can be
-used to determine the real world position by transforming the pixel
-coordinates to real-world coordinates, based on the scale factors
-$C_x$ and $C_y$, with $C_x = \frac{width(R)}{width(I)}$ and
-$C_y = \frac{height(R)}{height(I)}$, where $W$ is the real-world
-representation and $I$ the digital pixel image. This yields a dataset
-of images, labeled with $x, y$ coordinates and the number of
-matches. This process already introduces noise into the dataset, since
-SIFT can have wrong and inaccurate matches.
