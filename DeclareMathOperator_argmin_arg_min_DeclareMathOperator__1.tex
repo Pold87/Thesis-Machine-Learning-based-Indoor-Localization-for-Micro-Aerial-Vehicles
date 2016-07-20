@@ -217,23 +217,3 @@ Importantly, for generating the training dataset, no subsampling was
 used. Therefore, the training dataset will not show any variance, if
 the same images were used.
 
-\subsection{Texton Dictionary Generation}
-\label{sec:text-dict-gener}
-
-For generating a suitable dictionary for a given environment, an
-initial flight was performed. During this flight, 1000 randomly
-selected image patches of size $w \times h = 6 \times 6$ were
-extracted per image. In total, 100 images were used, resulting in
-$100,000$ image patches, which were clustered to create a texton
-dictionary. The resulting cluster centers---the prototypes of the
-clustering result---are the textons~\cite{varma2003texture}. An
-example of a learned dictionary can be found in
-Figure~\ref{fig:dictionary}.
-
-Different situations require different textons and a different number
-of them. The choice of these parameters is map-dependent, and we set
-it to 20 textons for all maps.
-
-
-% TODO: Write some stuff about the low-level implementation
-
