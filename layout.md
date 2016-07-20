@@ -27,8 +27,8 @@ Another_idea_if_the_homography__.tex
 figures/overview/overview.png
 section_Pillar_III_Map_evaluation__.tex
 figures/draug/draug.png
-subsection_Evaluation_Scheme_label_sec__.tex
 figures/comparison/comparison.png
+subsection_Evaluation_Scheme_label_sec__.tex
 begin_figure_h_begin_center__3.tex
 begin_figure_h_begin_center__2.tex
 begin_figure_h_begin_center__1.tex
