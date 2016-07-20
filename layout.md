@@ -21,6 +21,7 @@ section_Experiment_Determining_the_Frequency__.tex
 section_Experiment_Comparing_different_possible__.tex
 chapter_Results_label_chap_results__.tex
 chapter_Discussion_label_chap_discussion__.tex
+figures/realitygap/realitygap.png
 The_shift_of_the_processing__.tex
 chapter_Conclusion_and_Future_Work__.tex
 The_developed_algorithms_set_the__.tex
