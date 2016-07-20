@@ -14,6 +14,7 @@ figures/overview/overview.png
 section_Pillar_III_Map_evaluation__.tex
 figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
+section_Experiment_Determining_the_Frequency__.tex
 section_Experiment_Comparing_different_possible__.tex
 chapter_Results_label_chap_results__.tex
 chapter_Discussion_label_chap_discussion__.tex
