@@ -65,34 +65,3 @@ testing, the same camera model was used.
 Additionally, 1000 images of random scenes without markers were added
 to the training set, to ensure that the classifier exhibits a high
 true negative accuracy.
-
-\section{Experiment -- Dense map}
-\label{sec:experiment4}
-
-\begin{table}[h!]
-  \centering
-  \begin{tabular}{lr}
-    \toprule
-    Step & Time in $ms$\\
-    \midrule
-    Read image & $6$\\
-    Local standardization & $27$\\
-    Histogram extraction & $14$\\
-    Prediction (XGB) & $1$\\    
-    \bottomrule
-  \end{tabular}
-  \caption{{Time requirements for the steps of the algorithm.}}
-  \label{tab:timerequirementsdense}
-
-\end{table}
-
-\section{Experiment -- Motion tracking system for Stabilization, Texton-based Approach for estimation}
-\label{sec:experiment4}
-
-In this experiment, a fixed route was set using the ground control
-station. While the stabilization and guidance were performed using
-the motion tracking system, the position estimates were performed onboard
-of the MAV using the texton-based approach. The Euclidean distances between the estimates of the motion tracking system and the texton-based approach
-were measured separately for the $x$- and $y$-direction. The experiment uses the
-particle filter and the textons only.
-
