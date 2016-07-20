@@ -60,6 +60,7 @@ figures/samples_vs_similarity/samples_vs_similarity.png
 section_Goodness_of_Fit_section__.tex
 figures/lowest_highest/lowest_highest.png
 chapter_Discussion_label_chap_discussion__.tex
+The_evaluation_of_different_maps__.tex
 section_General_Discussion_label_sec__.tex
 figures/realitygap/realitygap.png
 The_shift_of_the_processing__.tex
