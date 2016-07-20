@@ -34,6 +34,7 @@ subsection_Texton_Dictionary_Generation_label__.tex
 subsection_k_Nearest_Neighbors_k__.tex
 section_Filtering_and_Smoothing_label__.tex
 begin_figure_h_begin_center__.tex
+begin_figure_h_begin_center__6.tex
 Another_idea_if_the_homography__.tex
 figures/overview/overview.png
 figures/comparison/comparison.png
