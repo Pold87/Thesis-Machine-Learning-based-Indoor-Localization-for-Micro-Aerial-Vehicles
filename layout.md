@@ -23,6 +23,7 @@ chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
 figures/gui/gui.png
 section_Pillar_I_Training_Set__.tex
+Keypoints_of_the_current_image__.tex
 begin_figure_h_begin_center__4.tex
 figures/bestmap/bestmap.png
 section_Pillar_II_Texton_based__.tex
