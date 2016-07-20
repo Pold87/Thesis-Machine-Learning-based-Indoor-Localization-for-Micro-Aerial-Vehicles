@@ -22,6 +22,7 @@ section_Texton_based_Approaches_label__.tex
 section_Synthetic_Data_Generation_label__.tex
 chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
+The_GUI_displays_the_position__.tex
 figures/gui/gui.png
 section_Pillar_I_Training_Set__.tex
 For_creating_the_orthomap_the__.tex
