@@ -1,21 +1,14 @@
-Widespread possibilities make Micro Air Vehicles (MAVs) flexible
-platforms. However, in confined spaces, specific localization
-techniques are needed, which require high precision, reliability, and
-rigorous error handling to minimize risks for people and hardware. Due
-to their small size, MAVs have limited processing power and cannot
+Widespread possibilities make Micro Air Vehicles (MAVs) flexible platforms.
+However, due to their small size, MAVs have limited processing power and cannot
 fall back to standard localization techniques. To address this
-issue, this thesis describes an efficient onboard localization
-technique for estimating $x,y$-coordinates for MAVs using a machine
-learning-based approach, within a known, modifiable indoor
-environment.
+issue, this thesis describes an efficient vision-based onboard localization
+technique. $x,y$-coordinates are estimated using a machine
+learning approach, within a known, modifiable indoor
+environment. The computational power of the approach is scalable to to different platforms, trading off speed and accuracy.
 
-The computational power of the approach is scalable to
-fit to different platforms.
-
-The thesis presents the development, software and hardware
-implementation, and results of a localization system that is based on
-textons---small, characteristic image patches. The histograms of
-textons are used as features for the $k$-Nearest Neighbors ($k$NN)
+The development, software and hardware
+implementation, and results of the localization system are presented. The proposed syste uses 
+textons as image features. Textons are small, characteristic image patches and their histograms are used as features for the $k$-Nearest Neighbors ($k$NN)
 algorithm. The outputs of this regression technique--multiple possible
 $x, y$-coordinates are used in a particle filter to neatly aggregate
 and smooth the estimates. The estimates of the computer vision-based
