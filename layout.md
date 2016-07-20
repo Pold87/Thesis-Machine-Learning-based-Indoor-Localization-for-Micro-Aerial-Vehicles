@@ -37,6 +37,7 @@ subsection_k_Nearest_Neighbors_k__.tex
 begin_algorithm_caption_Particle_filter__.tex
 section_Filtering_and_Smoothing_label__.tex
 begin_figure_h_begin_center__.tex
+figures/dependency_dist_error_x/dependency_dist_error_x.png
 figures/measurement_model/measurement_model.png
 This_allows_to_make_use__.tex
 Another_idea_if_the_homography__.tex
