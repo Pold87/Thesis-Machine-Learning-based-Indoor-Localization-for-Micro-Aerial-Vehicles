@@ -12,6 +12,7 @@ section_Research_Questions_label_sec__.tex
 section_Outline_label_sec_outline__.tex
 chapter_Background_and_Related_Work__.tex
 section_Vision_based_Localization_Methods__.tex
+subsection_Fiducial_Markers_label_sec__.tex
 figures/markers/markers.png
 subsection_Homography_Determination_Keypoint_Matching__.tex
 figures/sift/sift.png
