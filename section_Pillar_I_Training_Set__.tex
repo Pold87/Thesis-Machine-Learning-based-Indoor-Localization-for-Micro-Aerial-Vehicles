@@ -1,0 +1,108 @@
+\section{Pillar I: Training Set Generation}
+\label{sec:mapping}
+
+A main idea of the proposed method is to shift computational effort to
+an offline phase, before the MAV is used on a repetitive task. This
+shift is accomplished by using a light-weight machine learning
+approach instead of a computationally more complex algorithm, such as
+homography finding based on salient image keypoints.
+
+Supervised machine learning needs a training set to find a mapping
+from features to target values. In a computer vision-task, the
+features represent image characteristics, such as average pixel values
+or the amount of oriented gradients.
+
+The proposed method is based on
+histograms of textons. To create the training set, a convenient way is
+to align image features---that is, the texton histograms---with
+high-precision position estimates from a motion tracking system. 
+These
+systems can track rigid bodies at a high frequency within an error of
+few millimeters. This allows to create high-quality training data
+sets, where even low quality images can be mapped to the corresponding
+$x,y$-position. 
+
+This is achieved by saving the texton histogram on the MAV’s hard disk. The corresponding position from the motion tracking system is broadcast to the UAV via the ground station. The ground station receives the positions from the motion tracking system. 
+The major disadvantages of the approach are that
+motion tracking systems are usually expensive and time-consuming to
+move to different environments.
+
+As an alternative, we sought a low-budget and more flexible
+solution. While the homography-based approach (Section xxx) shows high matching quality
+for non-blurry images, it suffers from lacking robustness to noise
+and the high processing time requirements. To exploit the advantages,
+and straighten out the disadvantages, we used the approach in a preprocessing
+step to obtain labeled training data of a known environment. This
+allows to shift computational effort from the flight phase to a
+pre-flight phase---paving the way for autonomous flights of MAVs with
+limited processing power. It is based on two associated cornerstones
+that are performed in an offline phase: the creation of an
+\emph{orthomap} and finding a homography. The required image dataset
+for both cornerstones can be obtained by using in-flight pictures of a
+manual flight or by taking pictures with a hand-held camera.
+
+For creating the orthomap, the images from the dataset have to be stichted
+together to get a hyperspatial image of the scene. By orthorectifying
+these pictures, different camera angles can be straightened out,
+yielding seamless stitches. This results in a map of the
+environment. The stitched image has a higher resolution than the
+single images and contains a greater range of detail. The stitching
+step includes challenges: a subset of the recorded images might be
+distorted and each image must be orthorectified, otherwise perspective
+transformations could hinder the stitching process. The images can be
+orthorectified by estimating the most probable viewing angle based on
+the set of all images. Since a downward-looking camera is attached to
+the UAV, most images will be roughly aligned with the z-axis, given
+slow flight.
+
+For both steps, the software Agisoft
+PhotoScan~\cite{agisoft2013agisoft} was used. The stitching process
+can be time-consuming and error-prone. In some environments, an image
+from a top view point can be taken capturing the entire area with
+high-resolution camera, circumventing the need for stitching together
+multiple images. Yet another method starts with an existing image and
+modifies the environment accordingly---for example by painting the
+floor or printing posters--to correspond to the image. In all cases,
+we will describe the environment as \emph{map image}. 
+
+Keypoints of the current image and the map image are detected and
+described using the SIFT algorithm. This is followed by a matching
+process, that identifies corresponding keypoints between both
+images. These matches allow for finding a homography between both
+images. For determining the $x, y$-position of the current image, the
+center of it is projected on the reference image using the homography
+matrix. The pixel position of the center in the reference image can be
+used to determine the real world position by transforming the pixel
+coordinates to real-world coordinates, based on the scale factors
+$C_x$ and $C_y$, with $C_x = \frac{width(R)}{width(I)}$ and
+$C_y = \frac{height(R)}{height(I)}$, where $W$ is the real-world
+representation and $I$ the digital pixel image. This yields a dataset
+of images, labeled with $x, y$ coordinates and the number of
+matches. This process already introduces noise into the dataset, since
+SIFT can have wrong and inaccurate matches.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{figures/map/default_figure}
+\caption{{\label{fig:orthomap} This figure shows
+    the created orthomap of a rather texture-rich floor. It is
+    stitched together out of over 100 single images and represents a
+    real world area of approximately $10\times10$ meters. Image
+    distortions, non-mapped areas, and slightly skewed seams at
+    several points are visible.%
+}}
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{figures/sift/default_figure}
+\caption{{\label{fig:homography} The
+    image shows connected keypoint matches between the reference image
+    on the left and the query image on the right. The green lines
+    connect corresponding keypoints.%
+}}
+\end{center}
+\end{figure}
+
+In all cases, the result will be a labeled dataset of images and corresponding $x,y$-positions. The $x,y$-positions are of different quality depending on the used technique: orthomap-based, poster-based, or motion tracking-based. 
