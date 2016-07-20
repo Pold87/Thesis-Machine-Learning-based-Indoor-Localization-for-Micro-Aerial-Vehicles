@@ -1,0 +1,6 @@
+
+\subsection{Optical Flow}
+\label{sec:opticalflow}
+
+Optical flow estimates the motion based on successive images: the shift of corresponding image keypoints in $x,y$-direction.
+The approach is computationally rather complex. It is a relative localization method: without an initial reference point, it can only estimate the distance to an initial reference point but not its absolute position in space. The approach suffers from drift: since the distance travelled is based on comparing successive images, errors are accumulating over time. The approach alone does not have the  the possibility to correct these errors.
