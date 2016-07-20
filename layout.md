@@ -1,6 +1,7 @@
 abstract.tex
 untitled.tex
 chapter_Introduction_label_chap_introduction__.tex
+In_the_approach_proposed_in__.tex
 It_uses_a_rather_simple__.tex
 This_opens_the_door_for__.tex
 section_Contributions_label_sec_contributions__.tex
