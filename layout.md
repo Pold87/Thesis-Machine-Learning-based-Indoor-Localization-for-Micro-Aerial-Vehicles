@@ -12,6 +12,7 @@ section_Texton_based_Approaches_label__.tex
 section_Synthetic_Data_Generation_label__.tex
 chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
+Another_idea_if_the_homography__.tex
 figures/overview/overview.png
 section_Pillar_III_Map_evaluation__.tex
 figures/comparison/comparison.png
