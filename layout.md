@@ -19,6 +19,7 @@ figures/overview/overview.png
 section_Pillar_III_Map_evaluation__.tex
 figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
+section_Experiment_Texture_recognition_task__.tex
 section_Experiment_Motion_tracking_system__.tex
 section_Experiment_Dense_map_label__.tex
 section_Experiment_Texton_based_Approach__.tex
