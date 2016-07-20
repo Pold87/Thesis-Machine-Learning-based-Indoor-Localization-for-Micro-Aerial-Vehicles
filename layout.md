@@ -46,7 +46,7 @@ section_Pillar_III_Map_evaluation__.tex
 begin_figure_h_begin_center__5.tex
 figures/draug/draug.png
 subsection_Evaluation_Scheme_label_sec__.tex
-begin_figure_h_begin_center__1.tex
+In_future_research_the_bad__.tex
 figures/local_loss/local_loss.png
 chapter_Analysis_label_chap_analysis__.tex
 section_Analysis_Determining_the_Number__.tex
