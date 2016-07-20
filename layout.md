@@ -33,6 +33,7 @@ section_Pillar_II_Texton_based__.tex
 subsection_Texton_Dictionary_Generation_label__.tex
 figures/dict/dict.png
 subsection_k_Nearest_Neighbors_k__.tex
+begin_algorithm_caption_Particle_filter__.tex
 section_Filtering_and_Smoothing_label__.tex
 begin_figure_h_begin_center__.tex
 begin_figure_h_begin_center__6.tex
