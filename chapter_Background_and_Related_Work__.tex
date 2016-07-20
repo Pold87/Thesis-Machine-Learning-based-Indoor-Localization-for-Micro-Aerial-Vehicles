@@ -37,7 +37,7 @@ There is no direct way to modify the time complexity of the algorithm.
 
 A standard approach for estimating camera pose is detecting and
 describing keypoints of the current view and a reference image, using
-algorithms such as \textsc{Sift}~\cite{lowe1999object}. A
+algorithms such as \textsc{Sift}~\cite{lowe1999object}, followed by finding a homography between both keypoint sets. A
 keypoint is a salient image location that is invariant to different
 viewing angles and scaling. Keypoints are described by a feature vector. By finding a homography, that is a perspective transformation between the keypoints of the current view and a reference image, the current view can be located in the reference image. The $3 \times 3$
 homography matrix ($H$) is based on at least four keypoint matches
