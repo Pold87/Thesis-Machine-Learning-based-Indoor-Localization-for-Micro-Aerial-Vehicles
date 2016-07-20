@@ -1,1 +1,17 @@
-Replace this text with your caption
+The figure illustrates
+    the workflow of the proposed approach. After obtaining images from an initial flight,
+    the recorded images are stitched together to create an orthomap. The same
+    images are used to detect and describe their keypoints using
+    \textsc{Sift}, followed by finding a homography between the keypoints of the flight
+    images and the orthomap. The center of the homography is used as
+    $x, y$ coordinate for labeling the training set. Additionally, the
+    number of detected matches is saved for the corresponding $x, y$
+    estimate. Each image of the initial flight data set can be used
+    and a fixed amount of small $6\times6$ pixel image patches can be
+    extracted. These can be labeled with the nearest texton, using a
+    distance measure, for example, Euclidean distance. Finally, a
+    classifier can be trained using texton histogram as feature vector
+    and the corresponding $x, y$ coordinate as target value. This
+    process allows shifting computational burden of the \textsc{Sift}
+    algorithm and homography finding to a faster machine learning
+    approach.
