@@ -23,6 +23,7 @@ chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
 figures/gui/gui.png
 section_Pillar_I_Training_Set__.tex
+For_creating_the_orthomap_the__.tex
 For_both_steps_the_software__.tex
 Keypoints_of_the_current_image__.tex
 begin_figure_h_begin_center__4.tex
