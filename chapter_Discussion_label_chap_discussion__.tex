@@ -115,18 +115,3 @@ to test the ability of the particle filter on synthetic flights.
 \end{center}
 \end{figure}
 
-The shift of the processing power could be further amplified by using
-a different regression technique. In the current implementation using
-$k$NN regression, larger training data sets are penalized due to a
-greater prediction time. However, the choice of a different regression
-technique is not as straightforward as it might seem. The technique
-should be able to output multiple predictions, since certain map
-regions might be ambiguous.
-
-The presented approach is a vision-only approach. This makes it robust to external disruptions such as magnetic fields and reduces the amount of points of failure. Additionally, the approach can be used on different devices, such as handheld cameras. Still, future developments could incorporate data from the inertial measurement unit (IMU) in the
-particle filter’s motion model.
-
-Additionally, the time complexity of the algorithm can be further reduced with the aim of running the algorithm on
-fly-sized MAVs. Depending on the target platform, parallelization or threading could be used on multi-core systems to simultaneously compute texton histograms, make predictions and run the particle filter.     
-
-Currently, the computationally most complex part is the XXX.
