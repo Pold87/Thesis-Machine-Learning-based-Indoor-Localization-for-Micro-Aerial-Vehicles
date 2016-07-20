@@ -41,26 +41,3 @@ nearest neighbor of the sample will be the sample itself. However, in
 this scenario, we deal with random sampling such that each image will
 be represented by a slightly different histogram each time the
 histogram is extracted.
-
-\section{Experiment -- Texture recognition task} 
-\label{sec:experiment1}
-
-The classification algorithm was validated on a recorded in-flight
-video. For creating the data set, 500 images were recorded for each of
-32 logos, placed in different environments, as shown in
-Figure~\ref{exp1setup}. The images did not contain motion blur and
-were recorded in different heights ranging from 20\,cm to 150\,cm.
-
-For the training, three different approaches were compared: (i)
-training on recorded images, (ii) training on synthetic data and (iii)
-training on a combination of real-world data and synthetic data.  The
-combination (iii) should give an accuracy increase due to the larger
-training dataset. For generating synthetic data, each marker was
-randomly rotated and put into different environments using the data
-augmentation tool presented in
-Section~\ref{sec:syntheticdatageneration}. For both training and
-testing, the same camera model was used.
-
-Additionally, 1000 images of random scenes without markers were added
-to the training set, to ensure that the classifier exhibits a high
-true negative accuracy.
