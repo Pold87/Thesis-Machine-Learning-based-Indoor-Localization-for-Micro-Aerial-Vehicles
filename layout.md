@@ -26,6 +26,7 @@ section_Experiment_Determining_the_Number__.tex
 figures/samples_vs_similarity/samples_vs_similarity.png
 section_Goodness_of_Fit_section__.tex
 chapter_Discussion_label_chap_discussion__.tex
+section_General_Discussion_label_sec__.tex
 figures/realitygap/realitygap.png
 The_shift_of_the_processing__.tex
 chapter_Conclusion_and_Future_Work__.tex
