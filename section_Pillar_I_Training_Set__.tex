@@ -40,17 +40,3 @@ that are performed in an offline phase: the creation of an
 \emph{orthomap} and finding a homography. The required image dataset
 for both cornerstones can be obtained by using in-flight pictures of a
 manual flight or by taking pictures with a hand-held camera.
-
-For creating the orthomap, the images from the dataset have to be stichted
-together to get a hyperspatial image of the scene. By orthorectifying
-these pictures, different camera angles can be straightened out,
-yielding seamless stitches. This results in a map of the
-environment. The stitched image has a higher resolution than the
-single images and contains a greater range of detail. The stitching
-step includes challenges: a subset of the recorded images might be
-distorted and each image must be orthorectified, otherwise perspective
-transformations could hinder the stitching process. The images can be
-orthorectified by estimating the most probable viewing angle based on
-the set of all images. Since a downward-looking camera is attached to
-the UAV, most images will be roughly aligned with the z-axis, given
-slow flight.
