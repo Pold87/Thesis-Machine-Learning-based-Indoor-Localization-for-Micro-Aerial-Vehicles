@@ -28,10 +28,10 @@ figures/overview/overview.png
 section_Pillar_III_Map_evaluation__.tex
 figures/draug/draug.png
 subsection_Evaluation_Scheme_label_sec__.tex
+figures/comparison/comparison.png
 begin_figure_h_begin_center__3.tex
 begin_figure_h_begin_center__2.tex
 begin_figure_h_begin_center__1.tex
-figures/comparison/comparison.png
 chapter_Analysis_label_chap_analysis__.tex
 section_Analysis_Determining_the_Number__.tex
 section_Analysis_Setting_the_Baseline__.tex
