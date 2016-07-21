@@ -65,6 +65,7 @@ section_Goodness_of_Fit_section__.tex
 figures/lowest_highest/lowest_highest.png
 subsection_Time_requirements__.tex
 chapter_Discussion_label_chap_discussion__.tex
+In_the_real_time_position__.tex
 The_evaluation_of_different_maps__.tex
 section_General_Discussion_label_sec__.tex
 figures/realitygap/realitygap.png
