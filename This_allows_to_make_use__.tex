@@ -1,11 +1,10 @@
 This allows to make use of the information in all $k$ neighbors and
 keep track of a multimodal distribution. While keeping track of a
 multimodal distribution allows for incorporating several possible
-states of the system, the problem arises of which mode is the best
-one. Using a weighted average of the modes would again introduce the
-problem, that the weighted average falls into a low density
+states of the system, the system needs one best position estimate for guidance and stabilization after each iteration. Using a weighted average of the modes would again introduce the
+problem, that the weighted average could fall into a low density
 region. Therefore, the maximum a posteriori estimate, as described in
-\cite{driessen2008map} is used. This approach uses the following
+\cite{driessen2008map} was used. This approach uses the following
 formula to obtain the MAP estimate:
 
 Therefore, the final position estimate is equal to the position of one
