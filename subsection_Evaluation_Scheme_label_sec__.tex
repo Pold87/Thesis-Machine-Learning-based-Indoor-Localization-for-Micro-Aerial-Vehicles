@@ -1,17 +1,17 @@
 \subsection{Evaluation Scheme}
 \label{sec:evaluationscheme}
 
-The performance of a method might largely depend
-on the environment it is used in. The evaluation of a map is
+The performance of the proposed method depends
+on the environment it is used in: obviously, a texture-rich environment without repetiting patterns will be better suited than an uniformly colored environment. 
+
+Ideally, one would like to know, if the proposed method is able to work in a given environment. Therefore, we propose an evaluation scheme for given
+maps. This scheme assigns a global fitness value to a given map,
+proportional to the expected accuracy it is expected to achieve in the physical
+world. The evaluation scheme allows to inspect the given map and to detect
+regions that are responsible for the overall fitness value. The evaluation of a map is
 difficult, since the obtained histograms during a real flight depend
 on many factors: motion blur, distance to the map and rotations
 proportional to the map.
-
-Therefore, we propose an initial evaluation scheme for given
-maps. This scheme assigns a global fitness value to a given map,
-proportional to the expected accuracy if it is used in the physical
-world. Additionally, it allows to inspect the given map and detect the
-regions that are responsible for the overall fitness value.
 
 In the first step of the map evaluation procedure, $N$ different
 patches of a given map are generated using the tool \emph{draug}
