@@ -35,7 +35,7 @@ subsection_Texton_Dictionary_Generation_label__.tex
 figures/dict/dict.png
 subsection_k_Nearest_Neighbors_k__.tex
 begin_algorithm_caption_Particle_filter__.tex
-section_Filtering_and_Smoothing_label__.tex
+section_Filtering_label_sec_filtering__.tex
 begin_figure_h_begin_center__.tex
 figures/dependency_dist_error_x/dependency_dist_error_x.png
 figures/dependency_dist_error_y1/dependency_dist_error_y.png
