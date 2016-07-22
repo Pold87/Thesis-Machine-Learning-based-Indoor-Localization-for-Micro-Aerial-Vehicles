@@ -58,6 +58,7 @@ subsection_Accuracy_Unfiltered_Homography_method__.tex
 figures/map/map_rotated.png
 figures/SIFT_vs_OptiTrack/SIFT_vs_OptiTrack.png
 begin_table_H_centering_begin__.tex
+section_sec_Training_Set_by__.tex
 section_Experiment_Motion_tracking_system__.tex
 section_Experiment_Texton_based_Approach__.tex
 subsection_Experiment_Triggered_Landing_In__.tex
