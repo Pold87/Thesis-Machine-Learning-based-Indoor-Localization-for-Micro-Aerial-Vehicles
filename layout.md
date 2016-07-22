@@ -55,7 +55,7 @@ chapter_Analysis_label_chap_analysis__.tex
 section_Analysis_Determining_the_Number__.tex
 section_Analysis_Setting_the_Baseline__.tex
 subsection_Homography_method_versus_motion__.tex
-figures/map/map.png
+figures/map/map_rotated.png
 figures/SIFT_vs_OptiTrack/SIFT_vs_OptiTrack.png
 section_Experiment_Motion_tracking_system__.tex
 section_Experiment_Texton_based_Approach__.tex
