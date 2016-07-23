@@ -1,19 +1,6 @@
 \subsection{Texton Dictionary Generation}
 \label{sec:text-dict-gener}
 
-For generating a suitable dictionary for a given environment, an
-initial flight was performed. During this flight, 1000 randomly
-selected image patches of size $w \times h = 6 \times 6$ were
-extracted per image. In total, 100 images were used, resulting in
-$100,000$ image patches, which were clustered to create a texton
-dictionary. The resulting cluster centers---the prototypes of the
-clustering result---are the textons~\cite{varma2003texture}. An
-example of a learned dictionary can be found in
-Figure~\ref{fig:dictionary}.
-
-Different situations require different textons and a different number
-of them. The choice of these parameters is map-dependent, and we set
-it to 20 textons for all maps.
-
-
-% TODO: Write some stuff about the low-level implementation
+For learning a suitable dictionary for a given environment, image patches were clustered. The resulting cluster centers---the prototypes of the
+clustering result---are the textons~\cite{varma2003texture}. Different situations require different textons and a different number of them. The choice of these parameters is map-dependent, and we set it to 20 textons for all maps. The clustering was performed using a competitive learning scheme with a winner-take-all strategy. 
+In the beginning, the textons are initialized with 20 random patches from the first image. Then, each patch is compared to each texton using the Euclidean distance. The most similar texton to the current patch is declared as the ``winner". The texton is then adapted to be more similar to the current patch, by updating it with a learning rate of $\alpha = 0.02$. The first 100 images of each dataset were used to generate the dictionary. For each image, 1000 randomly selected image patches of size $w \times h = 6 \times 6$ were extracted, yielding $100,000$ image patches in total that were clustered.  An example of a learned dictionary can be found in Figure~\ref{fig:dictionary}.
