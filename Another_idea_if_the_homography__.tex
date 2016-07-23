@@ -1,14 +1,4 @@
 Another idea---if the homography-based approach is used for
-labeling---was to use the amount of detected keypoints as confidence
-value. However, again, no linear relation between the two variables
-could be found (Figure~\ref{fig:cor_sim_confi}).
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=0.7\columnwidth]{figures/fig_cor_sift_confi/default_figure}
-\caption{{\label{fig:cor_sift_confi} Dependence structure between number of keypoints and quality
-    of the measurement.%
-}}
-\end{center}
-\end{figure}
-
+labeling---was to use the amount of detected keypoints ($K$) as confidence
+value. However, again, no linear relationship between $K$ and the error in $x-direction$ ($X$) and the error in $y-direction$ ($Y$)
+could be found (Figure~\ref{fig:cor_sim_confi}): $\rho_{K, X} = 0.10$, $\rho_{K, Y} = 0.01$.
