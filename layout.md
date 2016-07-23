@@ -49,7 +49,6 @@ Another_idea_if_the_homography__.tex
 figures/overview/overview.png
 figures/comparison/comparison.png
 section_Pillar_III_Map_evaluation__.tex
-begin_figure_h_begin_center__5.tex
 figures/samples/samples.png
 figures/draug/draug.png
 subsection_Evaluation_Scheme_label_sec__.tex
