@@ -5,4 +5,4 @@
 Optical flow estimates the motion based on successive images: the shift of corresponding image keypoints in $x,y$-direction.
 The approach is computationally rather complex. It is a relative localization method: without an initial reference point, it can only estimate the distance to an initial reference point but not its absolute position in space. The approach suffers from drift: since the distance travelled is based on comparing successive images, errors are accumulating over time. The approach alone does not have the  the possibility to correct these errors.
 
-\citet{} McGuire introduces a lightweight optical flow algorithm that is able to run on-board of an MAV. The algorithm uses compressed representations of images in the form of edge histogram to calculate the flow.   
+\citet{mcguire2016local} introduce a lightweight optical flow algorithm that is able to run on-board of an MAV. The algorithm uses compressed representations of images in the form of edge histogram to calculate the flow.   
