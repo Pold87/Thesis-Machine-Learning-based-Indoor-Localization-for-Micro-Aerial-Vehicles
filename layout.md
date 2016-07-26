@@ -16,6 +16,7 @@ subsection_Fiducial_Markers_label_sec__.tex
 figures/markers/markers.png
 subsection_Homography_Determination_Keypoint_Matching__.tex
 figures/sift/sift.png
+The_approach_was_used_in__.tex
 subsection_Optical_Flow_label_sec__.tex
 section_Texton_based_Machine_Learning__.tex
 chapter_Methods_label_chap_methods__.tex
