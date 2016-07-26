@@ -23,7 +23,7 @@ chapter_Methods_label_chap_methods__.tex
 DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
 figures/Gcs/Gcs.png
 The_GUI_displays_the_position__.tex
-figures/gui/gui.png
+figures/gui/gui-cut.png
 section_Pillar_I_Training_Set__.tex
 For_creating_a_map_the__.tex
 For_the_stitching_process_the__.tex
