@@ -25,7 +25,7 @@ The_GUI_displays_the_position__.tex
 figures/gui/gui.png
 section_Pillar_I_Training_Set__.tex
 For_creating_a_map_the__.tex
-For_both_steps_the_software__.tex
+For_the_stitching_process_the__.tex
 Keypoints_of_the_current_image__.tex
 begin_figure_h_begin_center__4.tex
 figures/bestmap/bestmap.png
