@@ -1,4 +1,6 @@
 \section{Experiment -- Motion tracking system for Stabilization, Texton-based Approach for estimation}
+
+\subsection{Training Set based on Motion Tracking System}
 \label{sec:experiment-real}
 
 In this experiment, a fixed route was set using the ground control
@@ -6,4 +8,9 @@ station. While the stabilization and guidance were performed using
 the motion tracking system, the position estimates were performed onboard
 of the MAV using the texton-based approach. The Euclidean distances between the estimates of the motion tracking system and the texton-based approach
 were measured separately for the $x$- and $y$-direction. The experiment uses the
-particle filter and the textons only.
+particle filter and the textons only. The training dataset was composed of 500 images recorded at an height of approximately 1\,m, recorded in the time span of one hour before the experiment. The corresponding $x,y$-coordinates were obtained from the motion tracking system.  
+
+\subsection{Training Set based on Homography-finind Method}
+\label{sec:traininghomo}
+
+In this experiment, the training dataset was created using the homography-finding method. Apart from that, the settings are the same as in Experiment~\ref{sec:experiment-real}.
