@@ -25,7 +25,7 @@ patches of a given map are generated using the tool \emph{draug}
 \begin{align}
   \ell(x, y) &= x - y\\
   d_a(h_i, h_j) &= \text{cosine\_similarity}(h_i, h_j)\\
-  d_e(h_i, h_j) &= f_X(pos_i) = f_X(x_i, y_i)\\
+  d_e(h_i, h_j) &= f_X(pos_i \mid \mu, \Sigma) = f_X(x_i, y_i \mid \mu, \Sigma)\\
 \end{align}
 
 \begin{align}
