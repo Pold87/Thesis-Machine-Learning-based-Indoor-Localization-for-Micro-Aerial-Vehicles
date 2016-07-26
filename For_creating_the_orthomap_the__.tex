@@ -1,13 +1,10 @@
-For creating the orthomap, the images from the dataset have to be stichted
-together to get a hyperspatial image of the scene. By orthorectifying
-these pictures, different camera angles can be straightened out,
-yielding seamless stitches. This results in a map of the
-environment. The stitched image has a higher resolution than the
+For creating a map, the images from the dataset have to be stichted
+together to get a hyperspatial image of the scene. The stitched image has a higher resolution than the
 single images and contains a greater range of detail. The stitching
 step includes challenges: a subset of the recorded images might be
-distorted and each image must be orthorectified, otherwise perspective
-transformations could hinder the stitching process. The images can be
-orthorectified by estimating the most probable viewing angle based on
-the set of all images. Since a downward-looking camera is attached to
+distorted and perspective
+transformations can impede the stitching process. Certain software packages allow for orthorectifying the images
+ by estimating the most probable viewing angle based on
+the set of all images. However, since a downward-looking camera is attached to
 the UAV, most images will be roughly aligned with the z-axis, given
 slow flight.
