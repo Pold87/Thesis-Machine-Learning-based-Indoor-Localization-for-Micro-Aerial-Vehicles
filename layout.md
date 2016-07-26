@@ -35,6 +35,7 @@ subsection_Texton_Dictionary_Generation_label__.tex
 figures/dict/dict.png
 subsection_k_Nearest_Neighbors_k__.tex
 While_the_naive_approach_in__.tex
+figures/kalman-crop/kalman-crop.png
 figures/particle-crop/particle-crop.png
 TODO_Compare_particle_filter_with__.tex
 begin_algorithm_caption_Particle_filter__.tex
