@@ -41,7 +41,6 @@ figures/pseudocode 1/pseudocode 1.png
 figures/pseudocode 2/pseudocode 2.png
 figures/pseudocode 3/pseudocode 3.png
 figures/pseudocode 4/pseudocode 4.png
-begin_algorithm_caption_Particle_filter__.tex
 section_Filtering_label_sec_filtering__.tex
 figures/dependency_dist_error_x/dependency_dist_error_x.png
 figures/dependency_dist_error_y1/dependency_dist_error_y.png
