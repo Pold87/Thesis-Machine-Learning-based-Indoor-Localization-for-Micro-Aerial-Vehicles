@@ -12,13 +12,13 @@ of the particles.
 
 \begin{align}
   s_k^{MAP}  &= \text{arg}\max_{s_k}{p(s_k \mid Z_k)}\\
-             &= \argmax_{s_k}{p(z_k \mid s_k) p(s_k \mid Z_{k-1})} 
+             &= \text{arg}\max_{s_k}{p(z_k \mid s_k) p(s_k \mid Z_{k-1})} 
 \end{align}
 
 Therefore, the MAP estimator in our case is
 
 \begin{align}
-s_k^{MAP} = \argmax_{s_k} \lambda^M(s_k)
+s_k^{MAP} = \text{arg}\max_{s_k} \lambda^M(s_k)
 \end{align}
 with
 
@@ -30,7 +30,7 @@ This function is now only evaluated at a finite, chosen number of
 states, the particles, using
 
 \begin{align}
-\hat{s}_k^{MAP} = \argmax_{s_k \in \{s_k^i \mid i=1,\ldots,N\}} \lambda^M(s_k)
+\hat{s}_k^{MAP} = \text{arg}\_{s_k \in \{s_k^i \mid i=1,\ldots,N\}} \lambda^M(s_k)
 \end{align}
 
 In this formula, $p(z_k \mid s_k)$ is the likelihood of the particle
