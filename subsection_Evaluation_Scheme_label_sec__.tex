@@ -40,7 +40,7 @@ The cosine similarity (CS) is defined as:
 CS(h_i, h_j) = \frac{h_i^Th_j}{||h_i||\,||h_j||}
 \end{align}
 
-The cosine similarity has the convenient property that its values are bounded between $-1$ and $1$. In the present case, since the elements of $h_i$ and $h_j$ are non-negative, it is even bounded between $0$ and $1$. The function $f_x$ describes the non-normalized probability density function of the normal distribution: $f_x = e^{- \frac{(x - \mu)^2}{2 \sigma ^ 2}}$. This function is also bounded between $0$ and $1$, which makes the functions $f_X$ and $CS$ easily comparable.
+The cosine similarity has the convenient property that its values are bounded between $-1$ and $1$. In the present case, since the elements of $h_i$ and $h_j$ are non-negative, it is even bounded between $0$ and $1$. The function $f_x$ describes the non-normalized probability density function of the normal distribution: $f_X(x) = e^{- \frac{(x - \mu)^2}{2 \sigma ^ 2}}$. This function is also bounded between $0$ and $1$, which makes the functions $f_X$ and $CS$ easily comparable.
 
 The idea behind the global loss function $L$ is that histograms in closeby areas
 should be similar and the similarity should decrease the further away
