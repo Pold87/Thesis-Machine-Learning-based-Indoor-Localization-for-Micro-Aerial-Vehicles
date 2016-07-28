@@ -50,7 +50,7 @@ figures/overview/overview.png
 figures/comparison/comparison.png
 section_Pillar_III_Map_evaluation__.tex
 figures/samples/samples.png
-figures/draug/draug.png
+figures/draug/camera_model.png
 subsection_Evaluation_Scheme_label_sec__.tex
 In_future_research_the_bad__.tex
 figures/local_loss/local_loss.png
