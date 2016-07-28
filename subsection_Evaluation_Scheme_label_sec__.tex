@@ -37,7 +37,7 @@ patches of a given map are generated using the tool \emph{draug}
 
 The cosine similarity (CS) is defined as:
 \begin{align}
-CS(h_i, h_j) = \frac{h_i^Th_j}{||h_i||||h_j||}
+CS(h_i, h_j) = \frac{h_i^Th_j}{||h_i||\,||h_j||}
 \end{align}
 
 The cosine similarity has the convenient property that its values are bounded between $-1$ and $1$. In the present case, since the elements of $h_i$ and $h_j$ are non-negative, it is even bounded between $0$ and $1$. The function $f_x$ describes the non-normalized probability density function of the normal distribution: $f_x = e^{- \frac{(x - \mu)^2}{2 \sigma ^ 2}}$. This function is also bounded between $0$ and $1$, which makes the functions $f_X$ and $CS$ easily comparable.
