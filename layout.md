@@ -38,6 +38,7 @@ figures/kalman-crop/kalman-crop.png
 figures/particle-crop/particle-crop.png
 TODO_Compare_particle_filter_with__.tex
 figures/pseudocode 1/pseudocode 1.png
+figures/pseudocode 2/pseudocode 2.png
 begin_algorithm_caption_Particle_filter__.tex
 section_Filtering_label_sec_filtering__.tex
 figures/dependency_dist_error_x/dependency_dist_error_x.png
