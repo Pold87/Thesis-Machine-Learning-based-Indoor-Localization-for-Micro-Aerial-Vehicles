@@ -49,7 +49,6 @@ This_allows_to_make_use__.tex
 Another_idea_if_the_homography__.tex
 figures/keypoints_error_x1/keypoints_error_x1.png
 figures/keypoints_error_y/keypoints_error_y.png
-figures/overview/overview.png
 figures/overview_new/overview_new.png
 figures/overview_sift/overview_sift.png
 figures/comparison/comparison.png
