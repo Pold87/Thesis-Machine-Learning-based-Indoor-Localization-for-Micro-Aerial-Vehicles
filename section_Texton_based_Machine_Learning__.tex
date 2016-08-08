@@ -5,8 +5,7 @@ Textons are small characteristic image patches that can be used as image feature
 \citet{varma2005statistical} originally introduced textons for
 classifying different textures, showing that they outperform
 computationally more complex algorithms, like Gabor
-filters~\cite{varma2005statistical}.
-
+filters~\cite{varma2005statistical}. For the histogram extraction in the \emph{full sampling} setting, a small window---a kernel---is convolved over all image positions to extract and label patches.
 Instead of convolving a kernel over the entire image, the kernel can be applied at randomly sampled image positions, leading to similar texton histograms compared to the histograms when full sampling is used. The choice of the number of samples allows for modifying the computational effort, resulting in a
 trade-off between accuracy and execution frequency. A disadvantage is
 that it discards all information about the spatial arrangement of
