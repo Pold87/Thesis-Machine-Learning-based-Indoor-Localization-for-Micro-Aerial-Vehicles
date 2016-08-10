@@ -2,12 +2,9 @@ Widespread applications, from surveillance to search and rescue operations, make
 However, due to their small size, MAVs have limited processing power and cannot
 fall back to standard localization techniques, such as laser range finders. To address this
 issue, this thesis describes an efficient vision-based onboard localization
-technique. Using a machine
-learning approach, $x,y$-coordinates are estimated within a known, modifiable indoor
-environment. The computational power of the approach is scalable to to different platforms, trading off speed and accuracy.
+technique. Using machine learning, a light-weight approach is developed that estimates $x,y$-coordinates within a known, modifiable indoor environment. The computational power of the approach is scalable to different platforms, trading off speed and accuracy.
 
-The development, software and hardware
-implementation, and results of the localization system are presented. The proposed system employs 
+The proposed system employs 
 textons as image features. Textons are small characteristic image patches; their histograms are used as features for the $k$-Nearest Neighbors ($k$NN)
 algorithm. The outputs of this regression technique--multiple possible
 $x, y$-coordinates are used in a particle filter to neatly aggregate
@@ -33,5 +30,7 @@ The approach is based on three pillars: (i) a shift of processing power to an pr
 computationally complex steps, (ii) lightweight and adaptable algorithms to ensure real-time performance and portability to different platforms,
 (iii) modifiable environments that can be tailored to the proposed algorithm. 
 
+The development, software and hardware
+implementation, and results of the localization system are presented.
 The estimates of the proposed system are compared to the ground truth in five on-ground and two
 in-flight experiments with promising results.
