@@ -4,20 +4,16 @@ fall back to standard localization techniques, such as laser range finders. To a
 issue, this thesis describes an efficient vision-based onboard localization
 technique. Using machine learning, a light-weight approach is developed that estimates $x,y$-coordinates within a known, modifiable indoor environment. The computational power of the approach is scalable to different platforms, trading off speed and accuracy.
 
-The proposed system employs 
-textons as image features. Textons are small characteristic image patches; their histograms are used as features for the $k$-Nearest Neighbors ($k$NN)
-algorithm. The outputs of this regression technique--multiple possible
-$x, y$-coordinates are used in a particle filter to neatly aggregate
+Histograms of textons---small characteristic image patches---are used as features in a $k$-Nearest Neighbors ($k$NN) algorithm. The outputs of this regression technique--multiple possible
+$x, y$-coordinates are forwarded to a particle filter to neatly aggregate
 and smooth the estimates.
-
 %Promising results were obtained for all tasks:
 %waypoint navigation, accurate landing, and stable hovering in the
 %indoor environment.
-
 To predict the performance of the proposed algorithm in different environments, an evaluation
-technique is developed that compares actual histogram similarities to
+technique is developed that compares actual texton histogram similarities to
 ideal histogram similarities based on the distance between the underlying
-positions. The technique assigns a loss value to a given set of
+$x,y$-positions. The technique assigns a loss value to a given set of
 images, allowing for comparing different environments and positions withing the environment. A software tool creates synthetic images
 that could be taken during an actual flight. Using 46 high-resolution images, the synthetic flight images are used to compare their potential as ``map''.
 
@@ -26,7 +22,7 @@ that could be taken during an actual flight. Using 46 high-resolution images, th
 %to compare their performance in the real-world. In fact, the results
 %could be replicated on these maps.
 
-The approach is based on three pillars: (i) a shift of processing power to an pre-flight phase to pre-compute
+The presented approach is based on three pillars: (i) a shift of processing power to an pre-flight phase to pre-compute
 computationally complex steps, (ii) lightweight and adaptable algorithms to ensure real-time performance and portability to different platforms,
 (iii) modifiable environments that can be tailored to the proposed algorithm. 
 
