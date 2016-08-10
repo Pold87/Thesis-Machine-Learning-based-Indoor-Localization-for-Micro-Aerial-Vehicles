@@ -2,4 +2,12 @@ In the approach proposed in this thesis, computational power will be
 shifted to an offline training phase to achieve high-speed during live
 operation. In contrast to visual SLAM frameworks, this project considers
 scenarios in which the environment is known beforehand or can be even
-actively modified. The environment is non-dynamic and planar, therefore, the UAV will make use of texture on the bottom or ceiling of the environment.
+actively modified. The environment is non-dynamic and planar, therefore, the UAV will make use of texture on the bottom or ceiling of the environment. This opens the door for improving the proposed
+algorithm by changing the map. On the basis of desired characteristics
+of a given map, an evaluation technique was developed that determines
+the suitability of an environment for the proposed approach. This
+technique allows for spotting distant regions with similar image
+features, which could lead to deteriorated performance. The evaluation
+can be performed using a given map image or recorded images during
+flight. In the former case, synthetic images will be generated from
+the map image that simulate images taken during flight.
