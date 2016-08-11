@@ -6,25 +6,23 @@
 
 In a first setting, the commercially available Parrot AR.Drone2.0 was
 equipped with an Odroid XU-4 single board computer, a Logitech 525 HD
-webcam, a WiFi module, and a USB connection between the Odroid board
-and the AR.Drone2.0 flight controller to send and receive data between
-the two processors. Figure~\ref{fig:comparison} shows the setup.
+webcam, a WiFi module. Figure~\ref{fig:comparison} shows the setup. Camera images were processed on the more powerful Odroid processor and the resulting $x,y$-estimates were send over a USB data link to the MAV flight controller. 
+
+to send and receive data between
+the two processors.
 
 The Odroid processor has a full operating system (Ubuntu 15.04) and
-allows to run arbitrary Linux software. While this setup allowed to
-test algorithms on the rather powerful Odroid processor, the
-additional weight resulted in unstable flight performance. Therefore,
-we decided to modify the system to run it directly on-board of the UAV
-and not on an external board such as the Odroid processor. This
-removed the need for additional payload and made flight performance
+allows for running arbitrary Linux software.
+However, the additional weight through the modifications of the system, resulted in unstable flight performance. Therefore, we modified the system to execute the localization algorithm directly on board of the MAV
+and not on the additional Odroid processor. To this end, the software had to be ported from the the high-level language
+Python to the low-level language C without being able to rely on many
+existing software libraries.
+Finally, this removed the need for additional payload and made flight performance
 very stable. Also, it reduced the need to buy and attach an external
 processor and a point of failure. Another advantages is that the
 framework can be easily ported to any UAV supported by the paparazzi
-software. The disadvantages are that the on-board processors of many
-MAVs have a lower performance than the Odroid processor. Additionally,
-it required us to port the software from the high-level language
-Python to the low-level language C without being able to rely on many
-existing software libraries.
+software. The major disadvantage is that the on-board processors of many
+MAVs have a lower performance than the Odroid processor.
 
 We decided to use the quadcopter \emph{Parrot Bebop Drone}
 as prototype for all our tests. This UAV allow for navigating in
