@@ -5,12 +5,13 @@ Textons are small characteristic image patches that can be used as image feature
 \citet{varma2005statistical} originally introduced textons for
 classifying different textures, showing that they outperform
 computationally more complex algorithms, like Gabor
-filters~\cite{varma2005statistical}. For the histogram extraction in the \emph{full sampling} setting, a small window---a kernel---is convolved over all image positions to extract and label patches.
-Instead of convolving a kernel over the entire image, the kernel can be applied at randomly sampled image positions, leading to similar texton histograms compared to the histograms when full sampling is used. The choice of the number of samples allows for modifying the computational effort, resulting in a
+filters~\cite{varma2005statistical}. For the classification, the approach compares texton histograms between a training set and the test sample and the class of the closest training sample is assigned to the test sampe. To extract histograms in the \emph{full sampling} setting, a small window---a kernel---is convolved over all image positions and the frequency of textons is calculated.
+Instead of convolving a kernel over the entire image, the kernel can be applied at randomly sampled image position\cite{sde2012sub}. %leading to similar texton histograms compared to the histograms when full sampling is used.
+Modifying the number of samples allows for adjusting the computational effort, resulting in a
 trade-off between accuracy and execution frequency. A disadvantage is
 that it discards all information about the spatial arrangement of
 textons---it does not make use of the \emph{Where} of the information,
-just of the \emph{What}, which might result in different areas with
+just of the \emph{What}, which can result in different images with
 similar histograms.
 
 \citet{de2009design} use textons as image features for distinguishing
@@ -24,5 +25,6 @@ objects~\cite{de2012appearance}. Since closer objects should have less
 variation, these objects should appear less varied. Using this method,
 their MAV is successfully able to avoid obstacles in a $5m \times 5m$
 office space and achieves an AUC of up to .97 on rather distorted
-images. Additionally, it performs better than or, at least, equal to
-optical flow estimations.
+images.
+%Additionally, it performs better than or, at least, equal to
+%optical flow estimations.
