@@ -1,32 +1,29 @@
-Widespread applications, from surveillance to search and rescue operations, make Micro Air Vehicles (MAVs) flexible platforms.
+Widespread applications, ranging from surveillance to search and rescue operations, make Micro Air Vehicles (MAVs) versatile platforms.
 However, due to their small size, MAVs have limited processing power and cannot
-fall back to standard localization techniques, such as laser range finders. To address this
-issue, this thesis describes an efficient vision-based onboard localization
-technique. Using machine learning, a light-weight approach is developed that estimates $x,y$-coordinates within a known, modifiable indoor environment. The computational power of the approach is scalable to different platforms, trading off speed and accuracy.
+fall back on standard localization techniques. %, such as laser range finders.
+The contributions of this thesis are two-fold. On the one hand, this thesis describes an efficient vision-based onboard localization
+technique using machine learning. The light-weight approach estimates $x,y$-coordinates within a known and modifiable indoor environment. The computational power of the approach is scalable to different platforms, trading off speed and accuracy.
+Histograms of textons---small characteristic image patches---are used as features in a $k$-Nearest Neighbors ($k$NN) algorithm. Several possible $x,y$-coordinates that are outputted by this regression technique are forwarded to a particle filter to neatly aggregate the estimates and solve ambiguities.
 
-Histograms of textons---small characteristic image patches---are used as features in a $k$-Nearest Neighbors ($k$NN) algorithm. The outputs of this regression technique--multiple possible
-$x, y$-coordinates are forwarded to a particle filter to neatly aggregate
-and smooth the estimates.
 %Promising results were obtained for all tasks:
 %waypoint navigation, accurate landing, and stable hovering in the
 %indoor environment.
-To predict the performance of the proposed algorithm in different environments, an evaluation
-technique is developed that compares actual texton histogram similarities to
+On the other hand, an evaluation technique is developed that predicts the performance of the proposed algorithm in different environments. It compares actual texton histogram similarities to
 ideal histogram similarities based on the distance between the underlying
 $x,y$-positions. The technique assigns a loss value to a given set of
-images, allowing for comparing different environments and positions withing the environment. A software tool creates synthetic images
-that could be taken during an actual flight. Using 46 high-resolution images, the synthetic flight images are used to compare their potential as ``map''.
+images, allowing for comparisons between different environments and positions within the environment. A software tool creates synthetic images
+that could be taken during an actual flight. The method was tested on 46 high-resolution images to compare their potential as ``map.''
 
 %The
 %best one, the worst one and the one with median loss were printed out
 %to compare their performance in the real-world. In fact, the results
 %could be replicated on these maps.
 
-The presented approach is based on three pillars: (i) a shift of processing power to an pre-flight phase to pre-compute
-computationally complex steps, (ii) lightweight and adaptable algorithms to ensure real-time performance and portability to different platforms,
-(iii) modifiable environments that can be tailored to the proposed algorithm. 
+TODO: Write about experiments and results. 
+%The development, software and hardware
+%implementation, and results of the localization system are presented.
+%The estimates of the proposed system are compared to the ground truth in five on-ground and two
+%in-flight experiments with promising results.
 
-The development, software and hardware
-implementation, and results of the localization system are presented.
-The estimates of the proposed system are compared to the ground truth in five on-ground and two
-in-flight experiments with promising results.
+The presented approach is based on three pillars: (i) a shift of processing power to an pre-flight phase to pre-compute
+computationally complex steps, (ii) lightweight and adaptable algorithms to ensure real-time performance and portability to different platforms, (iii) modifiable environments that can be tailored to the proposed algorithm. These pillar build the foundation for efficient localization in various GPS-denied environments.
