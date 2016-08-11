@@ -6,15 +6,9 @@
 
 In a first setting, the commercially available Parrot AR.Drone2.0 was
 equipped with an Odroid XU-4 single board computer, a Logitech 525 HD
-webcam, a WiFi module. Figure~\ref{fig:comparison} shows the setup. Camera images were processed on the more powerful Odroid processor and the resulting $x,y$-estimates were send over a USB data link to the MAV flight controller. 
-
-to send and receive data between
-the two processors.
-
-The Odroid processor has a full operating system (Ubuntu 15.04) and
+webcam, a WiFi module. Figure~\ref{fig:comparison} shows the setup. The camera images were processed on the more powerful Odroid processor and the resulting $x,y$-estimates were sent over a USB data link to the MAV flight controller. The Odroid processor has a full operating system (Ubuntu 15.04) and
 allows for running arbitrary Linux software.
-However, the additional weight through the modifications of the system, resulted in unstable flight performance. Therefore, we modified the system to execute the localization algorithm directly on board of the MAV
-and not on the additional Odroid processor. To this end, the software had to be ported from the the high-level language
+However, the additional weight through the modifications of the system resulted in unstable flight performance. Therefore, we modified the system to execute the localization algorithm directly on board of the MAV and not on the additional Odroid processor. To this end, the software had to be ported from the the high-level language
 Python to the low-level language C without being able to rely on many
 existing software libraries.
 Finally, this removed the need for additional payload and made flight performance
