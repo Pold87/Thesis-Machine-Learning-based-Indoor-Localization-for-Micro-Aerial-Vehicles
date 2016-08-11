@@ -4,8 +4,8 @@ chapter_Introduction_label_chap_introduction__.tex
 If_sufficient_computational_and_physical__.tex
 However_this_reduced_physical_payload__.tex
 In_the_approach_proposed_in__.tex
-It_uses_a_rather_simple__.tex
 figures/nutshell/nutshell.png
+It_uses_a_rather_simple__.tex
 The_goal_is_to_estimate__.tex
 section_Contributions_label_sec_contributions__.tex
 section_Research_Questions_label_sec__.tex
@@ -61,7 +61,6 @@ figures/local_loss/local_loss.png
 chapter_Analysis_label_chap_analysis__.tex
 section_Analysis_Determining_the_Number__.tex
 section_Analysis_Setting_the_Baseline__.tex
-subsection_Accuracy_Unfiltered_Homography_method__.tex
 figures/map/map_rotated.png
 figures/SIFT_vs_OptiTrack/SIFT_vs_OptiTrack.png
 begin_table_H_centering_begin__.tex
@@ -74,7 +73,6 @@ chapter_Results_label_chap_results__.tex
 section_Experiment_Determining_the_Number__.tex
 figures/samples_vs_similarity/samples_vs_similarity.png
 section_Experiment_Real_Time_Position__.tex
-section_Homography_method_versus_motion__.tex
 figures/lowest_highest/lowest_highest.png
 subsection_Time_requirements__.tex
 chapter_Discussion_label_chap_discussion__.tex
