@@ -18,7 +18,7 @@ The_approach_was_used_in__.tex
 subsection_Optical_Flow_label_sec__.tex
 section_Texton_based_Machine_Learning__.tex
 chapter_Methods_label_chap_methods__.tex
-DeclareMathOperator_argmin_arg_min_DeclareMathOperator__1.tex
+section_Hardware_and_Software_of__.tex
 figures/Gcs/Gcs.png
 The_GUI_displays_the_position__.tex
 figures/gui/gui-cut.png
