@@ -1,5 +1,5 @@
 Keypoints of the current image and the map image are detected and
-described using the SIFT algorithm. The keypoint sets are further refined using Lowe's ratio test (TODO: source). This is followed by a matching
+described using the SIFT algorithm. The keypoint sets are further refined using Lowe's ratio test~\cite{lowe1999object}. This is followed by a matching
 process, that identifies corresponding keypoints between both
 images. The matching uses a 'brute-force' matching scheme and every keypoint is compared to every other keypoint. These matches allow for finding a homography between both
 images. For determining the $x, y$-position of the current image, the
