@@ -1,26 +1,26 @@
 \chapter{Conclusion}
 \label{chap:conclusion}
 
-This thesis presented a novel approach for fast and accurate indoor
+This thesis presented a novel approach for lightweight indoor
 localization of MAVs. We pursued an onboard design without the need of
 an additional ground station to foster flexibility and autonomy. The
 conducted on-ground and in-flight experiments underline the real-world
 applicability of the system. Promising results were obtained for
-waypoint navigation, accurate landing, and stable hovering in the
-indoor environment. The
-used approach is based on three pillars.\\
-The first pillar shifts computational effort from the flight phase to
-an offline preprocessing step. This allows for using sophisticated
-algorithms, without affecting performance during flight.
-The second pillar states that during flight the MAV lightweight
-algorithms should run with low-performing processors. These algorithms
-should be able to trade off speed with accuracy. This allows to use
-them on a wide range of models, from pico-drones to MAVs with a
-wing-span of over one meter. Examples of these adaptable algorithms
-are the particle filter
-and the texton-based approach.
-The third pillar is the known---and possibly---modifiable
-environment. This knowledge and flexibilty allows to predict the
-quality of the used approach. In contrast to SLAM frameworks, in which
-the task is to simultaneous mapping and localization, the proposed
-approach is intended for various repetitive indoor activities.
+position estimates and accurate landing in the indoor environment.
+
+The approach is based on three pillars that we identified for indoor
+localization for MAVs. The first pillar shifts computational effort
+from the flight phase to an offline preprocessing step. This provides
+the advantages of sophisticated algorithms, without affecting
+performance during flight. The second pillar states that during flight
+algorithms should be used that can trade off speed with accuracy. This
+allows their use on a wide range of models, from pico-drones to MAVs
+with a wing-span of over one meter. Examples of these adaptable
+algorithms are the texton-based approach and the particle filter. The
+third pillar is a known---and possibly---modifiable environment. This
+knowledge and flexibility allows for predicting and improving the
+quality of the approach.
+%In contrast to \textsc{slam} frameworks, in
+%which the task is to simultaneous mapping and localization, the
+%presented approach is intended for various repetitive indoor
+%activities.
